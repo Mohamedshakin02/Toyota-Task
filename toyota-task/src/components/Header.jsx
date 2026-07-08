@@ -41,6 +41,7 @@
 // export default Header
 
 import React from "react";
+import { Link } from 'react-router-dom'
 import cart from "../assets/cart.svg";
 import heart from "../assets/heart.svg";
 import menu from "../assets/menu.svg";
@@ -93,14 +94,14 @@ function Header() {
                 }
               `}
             >
-              <a
-                href="#"
+              <Link
+                to="#"
                 className={`flex items-center h-full ${
                   item.active ? "text-black" : "text-gray-600"
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import car1 from "../assets/cars/car 1.png";
 import car2 from "../assets/cars/car 2.png";
 import car3 from "../assets/cars/car 3.png";
@@ -78,8 +79,8 @@ function Cars() {
                                 }
               `}
                         >
-                            <a
-                                href="#"
+                            <Link
+                                to=""
                                 className={`
                   flex items-center
                   ${category.active
@@ -89,7 +90,7 @@ function Cars() {
                 `}
                             >
                                 {category.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
