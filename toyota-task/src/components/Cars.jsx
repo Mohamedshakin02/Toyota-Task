@@ -37,11 +37,10 @@ function Cars() {
         { name: "HIGHLANDER HYBRID 2026", image: car11 },
         { name: "LAND CRUISER 70 2026", image: car12 },
         { name: "LAND CRUISER PRADO 2026", image: car13 },
-        { name: "Tundra", image: car14 },
     ];
 
     return (
-        <section className='container px-4 lg:px-24 mx-auto mt-12 lg:mt-15'>
+        <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
             {/* <div className='flex items-center gap-3'>
                 <i class="bi bi-arrow-left-short text-3xl"></i>
                 <h1 className='text-2xl font-bold'>
@@ -59,14 +58,14 @@ function Cars() {
             </div> */}
 
             <div className="flex items-center gap-3">
-                <i className="bi bi-arrow-left-short text-3xl"></i>
-                <h1 className="text-2xl font-bold">
+                <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
+                <h1 className="text-3xl lg:text-2xl font-bold">
                     Select car model
                 </h1>
             </div>
 
             <div className="mt-5">
-                <ul className="flex items-center gap-5 font-medium">
+                <ul className="flex items-center gap-5 text-xl lg:text-base font-medium">
                     {categories.map((category) => (
                         <li
                             key={category.name}
@@ -85,7 +84,7 @@ function Cars() {
                   flex items-center
                   ${category.active
                                         ? "text-red-600"
-                                        : "text-gray-600"
+                                        : "text-gray-400"
                                     }
                 `}
                             >
@@ -96,22 +95,22 @@ function Cars() {
                 </ul>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-15">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 my-10">
                 {cars.map((car) => (
                     <div
                         key={car.name}
-                        className="rounded-sm p-4 py-5 bg-white"
+                        className="rounded-lg p-4 py-8 lg:py-10 bg-white"
                     >
-                        <div className="h-48 flex items-center justify-center">
+                        <div className="flex items-center justify-center mb-8">
                             <img
                                 src={car.image}
                                 alt={car.name}
-                                className="w-full h-full object-contain"
+                                className="w-full h-full object-contain scale-110 lg:scale-100"
                             />
                         </div>
 
-                        <div className="text-center mb-10">
-                            <h2 className="text-lg font-semibold">{car.name}</h2>
+                        <div className="text-center">
+                            <h2 className="text-2xl lg:text-lg font-normal">{car.name}</h2>
                         </div>
                     </div>
                 ))}
