@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Collection from './pages/Collection'
 import BookModal from './pages/BookModal'
+import PINModal from './pages/PINModal'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Collection />} />
         <Route path="/BookModal" element={<BookModal />} />
+        <Route path="/PINModal" element={<PINModal />} />
       </Routes>
     </>
   )
