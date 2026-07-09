@@ -9,6 +9,7 @@ import BookModal from './pages/BookModal'
 import PINModal from './pages/PINModal'
 import LoadModal from './pages/LoadModal'
 import DetailsPage from './pages/DetailsPage'
+import SummaryPage from './pages/SummaryPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
         <Route path="/PINModal" element={<PINModal />} />
         <Route path="/LoadModal" element={<LoadModal />} />
         <Route path="/Details" element={<DetailsPage />} />
+        <Route path="/Summary" element={<SummaryPage />} />
       </Routes>
     </>
   )

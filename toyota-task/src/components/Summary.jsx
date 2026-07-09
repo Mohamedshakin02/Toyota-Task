@@ -14,27 +14,48 @@ import 'swiper/css/pagination';
 
 import uae from "../assets/uae flag.png";
 
-
-function Details() {
+function Summary() {
     return (
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
             <div className="flex items-center gap-3">
                 <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
                 <h1 className="text-3xl lg:text-2xl font-bold">
-                    Confim Details
+                    Summary
                 </h1>
             </div>
 
             <div className='my-10 mb-5 lg:mb-15'>
                 <form action="">
                     <div className='grid grid-cols-1 lg:grid-cols-3 mb-10 gap-y-7 lg:gap-x-7 pr-5'>
-                        <div className='col-span-1 flex lg:flex-col bg-gray-200 rounded-lg border border-gray-400'>
-                            <div className='scale-80 max-w-60 lg:max-w-none'>
+
+                        <div className='relative col-span-1 flex flex-col rounded-lg border-dashed border-2 border-gray-400'>
+                            <i className="bi bi-pencil absolute top-4 right-4 text-xl text-red-600"></i>
+                            <div className='scale-75 max-w-none'>
                                 <img src={car} alt="LAND CRUISER HYBRID 2026" />
                             </div>
                             <div className='p-4'>
-                                <p className='font-normal text-2xl lg:text-lg text-gray-700 lg:text-black uppercase mb-1 lg:mb-0'>Land Cruiser Hyrbid 2026</p>
-                                <Link to="" className="text-red-600 font-semibold underline">Change</Link>
+                                <p className='font-bold text-2xl lg:text-xl text-black  mb-3'>Tuesday, 12 March 2026 - 08:30 AM</p>
+
+                                <div className='mb-3'>
+                                    <p className='text-sm text-gray-600'>Vehicle</p>
+                                    <p>Land Cruiser 2026</p>
+                                </div>
+
+                                <div className='flex justify-between items-end'>
+                                    <div>
+                                        <p className='text-sm text-gray-600'>Showroom</p>
+                                        <p>Toyota Aabu Dhabi Airport Road</p>
+                                    </div>
+
+                                    <div>
+                                        <Link to="" className="text-red-600 underline hidden lg:inline-block">Change</Link>
+                                    </div>
+
+
+                                </div>
+
+
+
                             </div>
                         </div>
 
@@ -108,9 +129,22 @@ function Details() {
                         </div>
                     </div>
 
+                    <div className="grid grid-cols-2 mb-5 pr-5">
+                        <div className="col-span-2 lg:col-span-1">
+                            <h1 className="font-medium text-base mb-2">
+                                Any Special request
+                            </h1>
+
+                            <textarea
+                                className="w-full border-gray-400 border-2 rounded-lg p-2 resize-none"
+                                placeholder="Any Special request (optional)"
+                            ></textarea>
+                        </div>
+                    </div>
+
                     <div>
                         <h1 className="text-2xl lg:text-xl font-bold">
-                            Personal details
+                            Personal details <i className="bi bi-pencil text-lg ml-3 text-red-600"></i>
                         </h1>
                     </div>
 
@@ -143,21 +177,21 @@ function Details() {
                             <div className='flex-1'>
 
 
-                                <div className='border-gray-400 border-2 rounded-lg p-1 px-2'>
+                                <div className='border-gray-400 border-2 rounded-lg p-1 px-2 bg-gray-200'>
                                     <div>
                                         <p className='text-xs text-gray-500'>First name</p>
                                     </div>
-                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none' />
+                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none text-gray-500' />
                                 </div>
                             </div>
 
                             <div className='flex-1'>
 
-                                <div className='border-gray-400 border-2 rounded-lg p-1 px-2'>
+                                <div className='border-gray-400 border-2 rounded-lg p-1 px-2 bg-gray-200'>
                                     <div>
                                         <p className='text-xs text-gray-500'>Last name</p>
                                     </div>
-                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none' />
+                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none text-gray-500' />
                                 </div>
                             </div>
 
@@ -166,7 +200,7 @@ function Details() {
                         <div className="flex flex-col lg:flex-row mt-5 gap-5 items-stretch">
 
                             {/* Email */}
-                            <div className="flex-1">
+                            <div className="flex-1 bg-gray-200">
                                 <div className="border-gray-400 border-2 rounded-lg p-1 px-2 h-full">
                                     <p className="text-xs text-gray-500">
                                         Enter email address
@@ -175,7 +209,7 @@ function Details() {
                                     <input
                                         type="text"
                                         defaultValue="ahmad@example.com"
-                                        className="w-full outline-none focus:outline-none"
+                                        className="w-full outline-none focus:outline-none text-gray-500"
                                     />
                                 </div>
                             </div>
@@ -222,7 +256,7 @@ function Details() {
                     <div className='pr-5'>
                         <hr className="my-7 border-gray-400" />
                     </div>
-                    
+
 
                     <div className='flex flex-col lg:flex-row gap-7 pr-5'>
 
@@ -321,8 +355,8 @@ function Details() {
                         </div>
 
                         <div className='mt-10'>
-                            <button className='w-full lg:w-auto p-2 px-7 bg-gray-400 text-white'>
-                                Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
+                            <button className='w-full lg:w-auto p-2 px-7 bg-red-600 text-white'>
+                                Confirm <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
                             </button>
                         </div>
                     </div>
@@ -334,4 +368,4 @@ function Details() {
     )
 }
 
-export default Details
+export default Summary
