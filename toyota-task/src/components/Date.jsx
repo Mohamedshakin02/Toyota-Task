@@ -263,7 +263,7 @@ function Date() {
                     </div>
 
                     <div className='mt-10 flex justify-end'>
-                        <button className='w-full lg:w-auto p-3 lg:p-2 px-7 bg-red-600 text-white'>
+                        <button className='w-full lg:w-auto py-3 px-7 lg:py-2 lg:px-7 bg-red-600 text-white'>
                             Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
                         </button>
                     </div>
