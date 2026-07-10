@@ -199,7 +199,7 @@ function Date() {
                     <h1 className=' font-medium text-lg mb-5'>Preferred Time</h1>
 
                     <div className="mt-5">
-                        <ul className="flex items-center gap-5 text-xl lg:text-base font-medium">
+                        <ul className="flex items-center gap-5 text-lg lg:text-small font-medium">
                             {categories.map((category) => (
                                 <li
                                     key={category.name}
@@ -263,10 +263,10 @@ function Date() {
                     </div>
 
                     <div className='mt-10 flex justify-end'>
-                            <button className='w-full lg:w-auto p-2 px-7 bg-red-600 text-white'>
-                                Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
-                            </button>
-                        </div>
+                        <button className='w-full lg:w-auto p-3 lg:p-2 px-7 bg-red-600 text-white'>
+                            Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
+                        </button>
+                    </div>
 
                 </div>
 

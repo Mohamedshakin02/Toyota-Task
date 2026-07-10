@@ -27,14 +27,20 @@ function Details() {
 
             <div className='my-10 mb-5 lg:mb-15'>
                 <form action="">
-                    <div className='grid grid-cols-1 lg:grid-cols-3 mb-10 gap-y-7 lg:gap-x-7 pr-5'>
-                        <div className='col-span-1 flex lg:flex-col bg-gray-200 rounded-lg border border-gray-400'>
-                            <div className='scale-80 max-w-60 lg:max-w-none'>
-                                <img src={car} alt="LAND CRUISER HYBRID 2026" />
+                    <div className='grid grid-cols-1 lg:grid-cols-3 mb-10 gap-y-7 lg:gap-x-7'>
+                        <div className='col-span-1 flex lg:flex-col bg-gray-200 rounded-lg border border-gray-400 mr-4 lg:mr-0 pb-3'>
+
+                            <div className='flex lg:justify-center flex-1 pl-5 lg:pl-0'>
+                                <img
+                                    src={car}
+                                    alt="LAND CRUISER HYBRID 2026"
+                                    className="lg:w-4/6 lg:h-auto object-contain"
+                                />
                             </div>
-                            <div className='p-4'>
-                                <p className='font-normal text-2xl lg:text-lg text-gray-700 lg:text-black uppercase mb-1 lg:mb-0'>Land Cruiser Hyrbid 2026</p>
-                                <Link to="" className="text-red-600 font-semibold underline">Change</Link>
+
+                            <div className='p-4 flex-1 md:flex-2'>
+                                <p className='font-normal text-xl lg:text-lg text-gray-700 lg:text-black uppercase mb-1 lg:mb-0'>Land Cruiser Hyrbid 2026</p>
+                                <Link to="" className="text-red-600 underline">Change</Link>
                             </div>
                         </div>
 
@@ -222,7 +228,7 @@ function Details() {
                     <div className='pr-5'>
                         <hr className="my-7 border-gray-400" />
                     </div>
-                    
+
 
                     <div className='flex flex-col lg:flex-row gap-7 pr-5'>
 
@@ -297,7 +303,7 @@ function Details() {
 
                                 <label
                                     htmlFor="checkbox-1"
-                                    className="select-none ms-2 text-sm text-gray-700"
+                                    className="select-none ms-2 text-sm text-black"
                                 >
                                     I consent to receive <span className='text-red-600 underline'>Marketing offers</span> and information
                                 </label>
@@ -313,15 +319,15 @@ function Details() {
 
                                 <label
                                     htmlFor="checkbox-2"
-                                    className="select-none ms-2 text-sm text-gray-700"
+                                    className="select-none ms-2 text-sm text-black"
                                 >
                                     I have read and agree to the <span className='text-red-600 underline'>Terms & conditions</span>
                                 </label>
                             </div>
                         </div>
 
-                        <div className='mt-10'>
-                            <button className='w-full lg:w-auto p-2 px-7 bg-gray-400 text-white'>
+                        <div className='mt-10 lg:mt-0'>
+                            <button className='w-full lg:w-auto py-3 px-7 lg:py-2 lg:px-7  bg-gray-400 text-white'>
                                 Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
                             </button>
                         </div>

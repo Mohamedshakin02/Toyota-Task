@@ -137,7 +137,7 @@ function Location() {
                                 </div>
                             </div>
 
-                            <div className='hidden lg:flex bg-gray-200 rounded-2xl lg:rounded-lg  p-2 gap-x-4'>
+                            <div className='hidden lg:flex bg-gray-200 rounded-2xl lg:rounded-lg p-2 gap-x-4'>
                                 <div className='bg-white p-3 flex-1 rounded-xl lg:rounded-lg'>
                                     <h1 className='font-medium'>Abu Dhabi, Musaffah - TheWave Service Center</h1>
                                     <p className='text-sm mt-2 text-gray-600'>Next to Musaffah Police Station - Musaffah - M28 - Abu Dhabi</p>

@@ -26,13 +26,19 @@ function Summary() {
 
             <div className='my-10 mb-5 lg:mb-15'>
                 <form action="">
-                    <div className='grid grid-cols-1 lg:grid-cols-3 mb-10 gap-y-7 lg:gap-x-7 pr-5'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 mb-10 gap-y-7 lg:gap-x-7'>
 
-                        <div className='relative col-span-1 flex flex-col rounded-lg border-dashed border-2 border-gray-400'>
+                        <div className='relative col-span-1 flex flex-col rounded-lg border-dashed border-2 border-gray-400 mr-4 lg:mr-0'>
                             <i className="bi bi-pencil absolute top-4 right-4 text-xl text-red-600"></i>
-                            <div className='scale-75 max-w-none'>
-                                <img src={car} alt="LAND CRUISER HYBRID 2026" />
+
+                            <div className="flex justify-center">
+                                <img
+                                    src={car}
+                                    alt="LAND CRUISER HYBRID 2026"
+                                    className="w-4/6 h-auto"
+                                />
                             </div>
+
                             <div className='p-4'>
                                 <p className='font-bold text-2xl lg:text-xl text-black  mb-3'>Tuesday, 12 March 2026 - 08:30 AM</p>
 
@@ -320,7 +326,7 @@ function Summary() {
                         <hr className="my-7 border-gray-400" />
                     </div>
 
-                    <div className='flex flex-col lg:flex-row lg:items-center justify-between mb pr-5'>
+                    <div className='flex flex-col lg:flex-row lg:items-end justify-between mb pr-5'>
                         <div className="flex flex-col gap-4">
                             <div className="flex items-center">
                                 <input
@@ -331,7 +337,7 @@ function Summary() {
 
                                 <label
                                     htmlFor="checkbox-1"
-                                    className="select-none ms-2 text-sm text-gray-700"
+                                    className="select-none ms-2 text-sm text-black"
                                 >
                                     I consent to receive <span className='text-red-600 underline'>Marketing offers</span> and information
                                 </label>
@@ -347,15 +353,15 @@ function Summary() {
 
                                 <label
                                     htmlFor="checkbox-2"
-                                    className="select-none ms-2 text-sm text-gray-700"
+                                    className="select-none ms-2 text-sm text-black"
                                 >
                                     I have read and agree to the <span className='text-red-600 underline'>Terms & conditions</span>
                                 </label>
                             </div>
                         </div>
 
-                        <div className='mt-10'>
-                            <button className='w-full lg:w-auto p-2 px-7 bg-red-600 text-white'>
+                        <div className='mt-10 lg:mt-0'>
+                            <button className='w-full lg:w-auto py-3 px-7 lg:py-2 lg:px-7  bg-red-600 text-white'>
                                 Confirm <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
                             </button>
                         </div>

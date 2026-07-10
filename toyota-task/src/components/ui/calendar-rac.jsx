@@ -24,7 +24,7 @@ function CalendarHeader() {
         slot="previous">
         <ChevronLeftIcon size={16} />
       </Button>
-      <HeadingRac className="grow text-center font-medium text-sm" />
+      <HeadingRac className="grow text-center font-medium text" />
       <Button
         className="flex size-9 items-center justify-center rounded-md text-muted-foreground/80 outline-none transition-[color,box-shadow] hover:bg-accent hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50"
         slot="next">
