@@ -1,16 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
-import Summary from '../components/Summary'
 import Footer from '../components/Footer'
+import Location from '../components/Location'
 
-function SummaryPage() {
+function LocationPage() {
   return (
     <>
       <Header />
-      <Summary />
+      <Location />
       <Footer />
     </>
   )
 }
 
-export default SummaryPage
+export default LocationPage
