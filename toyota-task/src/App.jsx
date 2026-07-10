@@ -11,6 +11,7 @@ import LoadModal from './pages/LoadModal'
 import DetailsPage from './pages/DetailsPage'
 import SummaryPage from './pages/SummaryPage'
 import LocationPage from './pages/LocationPage'
+import DatePage from './pages/DatePage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,7 +25,8 @@ function App() {
         <Route path="/LoadModal" element={<LoadModal />} />
         <Route path="/Details" element={<DetailsPage />} />
         <Route path="/Summary" element={<SummaryPage />} />
-         <Route path="/Location" element={<LocationPage />} />
+        <Route path="/Location" element={<LocationPage />} />
+        <Route path="/Date" element={<DatePage />} />
       </Routes>
     </>
   )

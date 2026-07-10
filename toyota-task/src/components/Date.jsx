@@ -15,10 +15,23 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
+import { getLocalTimeZone, today } from "@internationalized/date";
+import { useState } from "react";
+import { Calendar } from "@/components/ui/calendar-rac";
 
-function Location() {
+function Date() {
+    const [date, setDate] = useState(
+        today(getLocalTimeZone())
+    );
+
+    const categories = [
+        { name: "Morning", active: true },
+        { name: "Afternoon" },
+        { name: "Evening" },
+    ];
+
     return (
-        <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
+        <section className='container px-4 pr-0 lg:px-36 mx-auto my-12 lg:my-15'>
             <div className="flex items-center gap-3">
                 <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
                 <h1 className="text-3xl lg:text-2xl font-bold">
@@ -26,7 +39,7 @@ function Location() {
                 </h1>
             </div>
 
-            <div className='my-10 mb-5 lg:mb-15'>
+            <div className='my-10 mb-5'>
 
 
                 <div className='pr-0'>
@@ -161,10 +174,109 @@ function Location() {
 
             </div>
 
-            
+            <div className='pr-4'>
+
+                <div className='mt-8 gap-5'>
+                    <h1 className=' font-medium text-lg mb-5'>Select Date</h1>
+
+                    <div>
+                        <Calendar
+                            className="rounded-md border bg-gray-200 p-2"
+                            onChange={setDate}
+                            value={date}
+                            firstDayOfWeek="sun"
+                            locale="en-US"
+                        />
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div className='pr-4'>
+
+                <div className='mt-8 gap-5'>
+                    <h1 className=' font-medium text-lg mb-5'>Preferred Time</h1>
+
+                    <div className="mt-5">
+                        <ul className="flex items-center gap-5 text-xl lg:text-base font-medium">
+                            {categories.map((category) => (
+                                <li
+                                    key={category.name}
+                                    className={`
+                                    justify-center
+                                    border-b-3
+                                    ${category.active
+                                            ? "border-red-600 px-2"
+                                            : "border-transparent"
+                                        }
+                                  `}
+                                >
+                                    <Link
+                                        to=""
+                                        className={`
+                                      flex items-center
+                                      ${category.active
+                                                ? "text-red-600"
+                                                : "text-gray-400"
+                                            }
+                                    `}
+                                    >
+                                        {category.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className='flex flex-wrap gap-3 mt-8'>
+                        <div className=''>
+                            <button className='bg-gray-200 text-base p-2 px-3 rounded-lg'>
+                                08:00 AM
+                            </button>
+                        </div>
+
+                        <div className=''>
+                            <button className='bg-red-600 text-white text-base p-2 px-3 rounded-lg'>
+                                <i class="bi bi-check2 text-white mr-2"></i>
+                                09:00 AM
+                            </button>
+                        </div>
+
+                        <div className=''>
+                            <button className='bg-gray-200 text-base p-2 px-3 rounded-lg'>
+                                10:00 AM
+                            </button>
+                        </div>
+
+                        <div className=''>
+                            <button className='bg-gray-200 text-base p-2 px-3 rounded-lg'>
+                                11:00 AM
+                            </button>
+                        </div>
+
+                        <div className=''>
+                            <button className='bg-gray-200 text-base p-2 px-3 rounded-lg'>
+                                12:00 PM
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className='mt-10 flex justify-end'>
+                            <button className='w-full lg:w-auto p-2 px-7 bg-red-600 text-white'>
+                                Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
+                            </button>
+                        </div>
+
+                </div>
+
+            </div>
+
+
+
 
         </section>
     )
 }
 
-export default Location
+export default Date
