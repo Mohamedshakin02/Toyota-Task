@@ -115,7 +115,7 @@ function Date() {
                             <div className='relative mt-8 lg:mt-0 bg-gray-300 rounded-2xl lg:rounded-lg p-2 flex gap-x-4 border border-black'>
 
                                 {/* Last Visited Badge */}
-                                <div className='inline-block lg:hidden absolute bottom-[calc(100%-1px)] right-3 bg-black text-white px-4 py-1.5 rounded-t-xl text-sm'>
+                                <div className='inline-block lg:hidden absolute bottom-[calc(100%-1px)] right-2.5 bg-black text-white px-4 py-1.5 rounded-t-xl text-sm -z-1'>
                                     Last Visited
                                 </div>
 
