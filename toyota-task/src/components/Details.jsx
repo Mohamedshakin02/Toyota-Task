@@ -120,7 +120,7 @@ function Details() {
                         </h1>
                     </div>
 
-                    <div className='pr-5'>
+                    <div className='pr-4'>
                         <h1 className='mt-5 font-medium text-lg mb-5'>Title<span className='text-red-600 '>*</span></h1>
 
                         <div className='flex gap-3'>
@@ -225,12 +225,12 @@ function Details() {
 
                     </div>
 
-                    <div className='pr-5'>
+                    <div className='pr-4'>
                         <hr className="my-7 border-gray-400" />
                     </div>
 
 
-                    <div className='flex flex-col lg:flex-row gap-7 pr-5'>
+                    <div className='flex flex-col lg:flex-row gap-7 pr-4'>
 
                         <div className='flex-1'>
                             <h1 className='font-medium text-lg mb-5'>Contact prefrences<span className='text-red-600 '>*</span></h1>
@@ -288,11 +288,11 @@ function Details() {
 
                     </div>
 
-                    <div className='pr-5'>
+                    <div className='pr-4'>
                         <hr className="my-7 border-gray-400" />
                     </div>
 
-                    <div className='flex flex-col lg:flex-row lg:items-center justify-between mb pr-5'>
+                    <div className='flex flex-col lg:flex-row lg:items-center justify-between mb pr-4'>
                         <div className="flex flex-col gap-4">
                             <div className="flex items-center">
                                 <input
