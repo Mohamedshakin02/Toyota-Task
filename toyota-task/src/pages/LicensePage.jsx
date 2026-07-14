@@ -6,10 +6,10 @@ import License from '@/components/License'
 function LicensePage() {
   return (
     <>
-            <Header />
-            <License />
-            <Footer />
-        </>
+      <Header />
+      <License />
+      <Footer />
+    </>
   )
 }
 

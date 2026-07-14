@@ -14,6 +14,7 @@ import LocationPage from './pages/LocationPage'
 import DatePage from './pages/DatePage'
 import ThanksPage from './pages/ThanksPage'
 import LicensePage from './pages/LicensePage'
+import LicenseIDPage from './pages/LicenseIDPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Date" element={<DatePage />} />
         <Route path="/Thanks" element={<ThanksPage />} />
         <Route path="/License" element={<LicensePage />} />
+        <Route path="/LicenseID" element={<LicenseIDPage />} />
       </Routes>
     </>
   )
