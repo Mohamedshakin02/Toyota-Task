@@ -14,12 +14,12 @@ function LicenseError() {
             <div className='container lg:px-36 mx-auto mt-12 lg:mt-15 p-2'>
                 <div className='w-full p-4 bg-red-100 border-2 border-red-500 flex items-center gap-4 rounded-sm'>
                     <div><i class="bi bi-exclamation-circle text-red-500 text-xl"></i></div>
-                <div className='text-red-500 flex flex-col gap-0.5'>
-                    <h1 className='font-semibold'>Something went wrong</h1>
-                    <p>We're having trouble connecting. Your details are saved locally; we will retry automatically.</p>
+                    <div className='text-red-500 flex flex-col gap-0.5'>
+                        <h1 className='font-semibold'>Something went wrong</h1>
+                        <p>We're having trouble connecting. Your details are saved locally; we will retry automatically.</p>
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
 
             <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
