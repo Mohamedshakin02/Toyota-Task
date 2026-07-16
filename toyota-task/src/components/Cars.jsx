@@ -41,22 +41,7 @@ function Cars() {
     ];
 
     return (
-        <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            {/* <div className='flex items-center gap-3'>
-                <i class="bi bi-arrow-left-short text-3xl"></i>
-                <h1 className='text-2xl font-bold'>
-                    Select car model
-                </h1>
-            </div>
-
-            <div className='mt-5'>
-                <ul className="flex items-center gap-5 font-medium h-full">
-                    <li className='border-b-3 border-transparent hidden lg:flex'><a href="" className="text-gray-600 items-center h-full flex">Hybrid</a></li>
-                    <li className='border-b-3 border-transparent hidden lg:flex'><a href="" className="text-gray-600 items-center h-full flex">Sedan</a></li>
-                    <li className='border-b-3 border-red-600 h-full px-2 flex justify-center'><a href="" className="text-red-600 items-center h-full flex">SUV</a></li>
-                    <li className='border-b-3 border-transparent hidden lg:flex'><a href="" className="text-gray-600 items-center h-full flex">GR</a></li>
-                </ul>
-            </div> */}
+        <section className='container px-4 lg:px-36 mx-auto pt-12 lg:pt-15 bg-[#F9F9F9]'>
 
             <div className="flex items-center gap-3">
                 <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
@@ -96,7 +81,7 @@ function Cars() {
                 </ul>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 my-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 py-10">
                 {cars.map((car) => (
                     <div
                         key={car.name}

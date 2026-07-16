@@ -1,16 +1,6 @@
 import React from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import required modules
-import { FreeMode, Pagination } from 'swiper/modules';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
 
 import uae from "../assets/uae flag.png";
 

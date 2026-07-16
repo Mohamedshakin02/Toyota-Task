@@ -1,16 +1,6 @@
 import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import required modules
-import { FreeMode, Pagination } from 'swiper/modules';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -26,8 +16,8 @@ function LicenseID() {
                 <p className='text-lg'>Please upload clear photos of both the front and back of your valid driver's license.</p>
             </div>
 
-            <div className='mb-5 lg:mb-10'>
-                <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 mb-10 gap-y-7 lg:gap-x-5 items-stretch">
+            <div className='mb-5 lg:mb-12'>
+                <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-5 items-stretch">
 
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>

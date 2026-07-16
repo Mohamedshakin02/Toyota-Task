@@ -16,6 +16,8 @@ import ThanksPage from './pages/ThanksPage'
 import LicensePage from './pages/LicensePage'
 import LicenseIDPage from './pages/LicenseIDPage'
 import LicenseIDFullPage from './pages/LicenseIDFullPage'
+import LicenseWaiverPage from './pages/LicenseWaiverPage'
+import LicenseErrorPage from './pages/LicenseErrorPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,6 +37,8 @@ function App() {
         <Route path="/License" element={<LicensePage />} />
         <Route path="/LicenseID" element={<LicenseIDPage />} />
         <Route path="/LicenseIDFull" element={<LicenseIDFullPage />} />
+        <Route path="/LicenseWaiver" element={<LicenseWaiverPage />} />
+        <Route path="/LicenseError" element={<LicenseErrorPage />} />
       </Routes>
     </>
   )
