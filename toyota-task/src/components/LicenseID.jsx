@@ -36,7 +36,7 @@ function LicenseID() {
                         </div>
 
                         <div className='flex-1 flex gap-x-5'>
-                            <div className='flex flex-col aspect-square lg:aspect-auto rounded-lg border-dashed border-2 border-gray-400 text-gray-600 w-full gap-y-2 p-4'>
+                            <div className='flex flex-col rounded-lg border-2 border-black text-gray-600 w-full gap-y-2 p-4 justify-center'>
                                 <div>
                                     <img src={EmiratesFront} alt="" />
                                 </div>
@@ -66,9 +66,12 @@ function LicenseID() {
                             <h1 className='font-medium text-xl lg:text-lg mb-5'>Sign the waiver<span className='text-red-600'>*</span></h1>
                         </div>
 
-                        <div className='grid grid-cols-7 border-2 border-gray-400 rounded-lg'>
-                            <div className='col-span-3 flex box-border scale-90 flex-col items-center justify-center rounded-lg text-gray-600 gap-y-4'>
-                                <img src={document} alt="Waiver Document" className="object-contain" />
+                        <div className='flex-1 grid grid-cols-7 border-2 border-gray-400 rounded-lg'>
+                            <div className='col-span-3 flex box-border flex-col items-center justify-center rounded-lg text-gray-600 gap-y-4'>
+                                <div className='h-full p-4'>
+                                    <img src={document} alt="Waiver Document" className="w-full h-full object-cover" />
+                                </div>
+                                
                             </div>
                             <div className='col-span-4 flex flex-col items-center justify-center rounded-lg text-gray-600 w-full gap-y-5'>
                                 <div> <i className="bi bi-pencil text-2xl lg:text-3xl"></i> </div>
@@ -76,9 +79,10 @@ function LicenseID() {
                             </div>
                         </div>
 
-                        <div className='hidden lg:block mt-3 text-gray-600'>
-                            <br className='text-base'></br>
+                        <div className='mt-3 text-sm text-gray-600 invisible'>
+                            <p>Supported formats PDF, .JPEG, and .PNG, up to 5MB</p>
                         </div>
+                       
                     </div>
 
                 </div>
