@@ -42,7 +42,7 @@ function PINModal() {
                         </div>
 
 
-                        <div className="p-8 space-y-3">
+                        <div className="p-5 lg:p-7 space-y-3">
 
                             <h1 className="text-2xl lg:text-xl font-bold">
                                 Verify your phone number

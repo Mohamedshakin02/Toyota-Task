@@ -31,9 +31,9 @@ function Collection() {
                         </div>
 
 
-                        <div className="p-5 space-y-4">
+                        <div className="p-5 lg:p-7 space-y-4">
 
-                            <h1 className="text-2xl lg:text-xl font-bold">
+                            <h1 className="text-2xl font-bold">
                                 Book a test drive
                             </h1>
 
