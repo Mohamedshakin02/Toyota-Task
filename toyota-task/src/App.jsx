@@ -23,6 +23,7 @@ import ReschedulePage from './pages/ReschedulePage'
 import RescheduleDatePage from './pages/RescheduleDatePage'
 import RescheduleConfirmPage from './pages/RescheduleConfirmPage'
 import CancelModal from './pages/CancelModal'
+import CancelConfirmPage from './pages/CancelConfirmPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -49,6 +50,7 @@ function App() {
         <Route path="/RescheduleDate" element={<RescheduleDatePage />} />
         <Route path="/RescheduleConfirm" element={<RescheduleConfirmPage/>} />
         <Route path="/CancelModal" element={<CancelModal/>} />
+        <Route path="/CancelConfirm" element={<CancelConfirmPage/>} />
       </Routes>
     </>
   )

@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../components/Header'
-import Cars from '../components/Cars'
 import Footer from '../components/Footer'
 import { useState } from 'react'
 import uae from "../assets/uae flag.png";
+import Reschedule from '@/components/Reschedule'
 
 function CancelModal() {
     const [open, setOpen] = useState(true)
@@ -11,7 +11,7 @@ function CancelModal() {
     return (
         <>
             <Header />
-            <Cars />
+            <Reschedule />
             <Footer />
 
             {open && (

@@ -19,12 +19,12 @@ function Confirm() {
             </div>
 
             <div className='mt-10 w-full p-4 px-6 bg-gray-100  flex items-start gap-4 rounded-sm'>
-                    <div className='mt-1'><i class="bi bi-check-circle-fill text-2xl text-green-500"></i></div>
-                    <div className='flex flex-col gap-0.5 lg:gap-2'>
-                        <h1 className='font-bold text-xl'>Confirmation sent via [WhatsApp/Email]</h1>
-                        <p className='text-gray-500'>You'll receive a reminder 24 hours before your appointment.</p>
-                    </div>
+                <div className='mt-1'><i class="bi bi-check-circle-fill text-2xl text-green-500"></i></div>
+                <div className='flex flex-col gap-0.5 lg:gap-2'>
+                    <h1 className='font-bold text-xl'>Confirmation sent via [WhatsApp/Email]</h1>
+                    <p className='text-gray-500'>You'll receive a reminder 24 hours before your appointment.</p>
                 </div>
+            </div>
 
 
             <div className='mt-12 mb-15 flex flex-col lg:flex-row rounded-lg border-dashed border-2 border-gray-400'>
