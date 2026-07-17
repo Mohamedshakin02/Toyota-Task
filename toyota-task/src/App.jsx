@@ -19,6 +19,7 @@ import LicenseIDFullPage from './pages/LicenseIDFullPage'
 import LicenseWaiverPage from './pages/LicenseWaiverPage'
 import LicenseErrorPage from './pages/LicenseErrorPage'
 import ConfrimPage from './pages/ConfirmPage'
+import ReschedulePage from './pages/ReschedulePage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -41,6 +42,7 @@ function App() {
         <Route path="/LicenseWaiver" element={<LicenseWaiverPage />} />
         <Route path="/LicenseError" element={<LicenseErrorPage />} />
         <Route path="/Confirm" element={<ConfrimPage />} />
+        <Route path="/Reschedule" element={<ReschedulePage />} />
       </Routes>
     </>
   )

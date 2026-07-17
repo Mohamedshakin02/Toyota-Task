@@ -104,7 +104,7 @@ function Thanks() {
                     <div className="col-span-2 order-2 lg:order-3 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-x-10 p-4 border-2 border-gray-300 rounded-lg">
                         <div className='flex flex-col gap-y-3'>
                             <h1 className='font-bold text-2xl lg:text-xl text-black'>Upload your driver license</h1>
-                            <p>Upload now for a faster check-in, or use the link we've sent via [WhatsApp/Email] to provide it later at your convenience.</p>
+                            <p className='text-lg'>Upload now for a faster check-in, or use the link we've sent via [WhatsApp/Email] to provide it later at your convenience.</p>
                         </div>
                         <div>
                             <button className='p-2 px-7 mt-5 lg:mt-0 border-2 border-red-600 text-red-600 whitespace-nowrap'>

@@ -6,9 +6,12 @@ import Footer from '../components/Footer'
 function Collection() {
   return (
     <>
-      <Header />
-      <Cars />
-      <Footer />
+      <div className='bg-[#F9F9F9]'>
+        <Header />
+        <Cars />
+        <Footer />
+      </div>
+
     </>
   )
 }
