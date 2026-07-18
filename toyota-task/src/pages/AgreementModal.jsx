@@ -23,7 +23,7 @@ function AgreementModal() {
 
                         <div className="p-5 lg:p-7 text-center">
 
-                            <h1 className="text-2xl font-bold mb-2">
+                            <h1 className="text-2xl font-bold mb-2 mt-4 lg:mt-0">
                                 Agreement required
                             </h1>
 

@@ -38,7 +38,7 @@ function Collection() {
                             </h1>
 
                             <form action="">
-                                <div className="mb-4">
+                                <div className="mb-2">
                                     <label htmlFor="name" className="block mt-5 mb-2 text-lg lg:text-base font-normal">
                                         Mobile Number
                                     </label>
@@ -66,7 +66,7 @@ function Collection() {
                                 <div>
                                     <button
                                         type="submit"
-                                        className="bg-gray-500 text-white px-4 py-2 w-full"
+                                        className="bg-gray-500 text-white px-4 py-3 w-full"
                                     >
                                         Send Verification Code
                                     </button>

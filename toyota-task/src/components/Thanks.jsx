@@ -18,11 +18,11 @@ function Thanks() {
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col rounded-lg border-dashed border-2 border-gray-400'>
 
-                        <div className="flex justify-center">
+                        <div className="flex justify-center 2xl:-mt-3">
                             <img
                                 src={car}
                                 alt="LAND CRUISER HYBRID 2026"
-                                className="w-4/6 h-auto"
+                                className="w-4/6 h-auto lg:h-fit"
                             />
                         </div>
 

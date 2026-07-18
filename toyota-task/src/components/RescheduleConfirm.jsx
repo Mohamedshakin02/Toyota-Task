@@ -71,11 +71,13 @@ function RescheduleConfirm() {
                 </div>
                 <div>
                     <button className='p-2 px-7 mt-5 lg:mt-0 border-2 border-red-600 text-red-600 whitespace-nowrap'>
-                        Upload now
+                        <span className="lg:hidden">Upload now</span>
+
+                        <span className="hidden lg:inline">Manage my documents</span>
                     </button>
                 </div>
             </div>
-            
+
         </section>
     )
 }

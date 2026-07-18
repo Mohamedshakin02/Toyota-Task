@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
 // Import Swiper React components
@@ -15,6 +16,13 @@ import 'swiper/css/pagination';
 import uae from "../assets/uae flag.png";
 
 function Summary() {
+    const [isArabicRequested, setIsArabicRequested] = useState(false);
+    const [isSecondModelRequested, setIsSecondModelRequested] = useState(false);
+    const [selectedModel, setSelectedModel] = useState("");
+
+    const showDropdown = isSecondModelRequested && !isArabicRequested;
+    const showError = showDropdown && selectedModel === "";
+
     return (
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
             <div className="flex items-center gap-3">
@@ -50,7 +58,7 @@ function Summary() {
                                 <div className='flex justify-between items-end'>
                                     <div>
                                         <p className='text-sm text-gray-600'>Showroom</p>
-                                        <p>Toyota Aabu Dhabi Airport Road</p>
+                                        <p>Toyota Abu Dhabi Airport Road</p>
                                     </div>
 
                                     <div>
@@ -187,7 +195,7 @@ function Summary() {
                                     <div>
                                         <p className='text-xs text-gray-500'>First name</p>
                                     </div>
-                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none text-gray-500' />
+                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none text-gray-500' disabled />
                                 </div>
                             </div>
 
@@ -197,7 +205,7 @@ function Summary() {
                                     <div>
                                         <p className='text-xs text-gray-500'>Last name</p>
                                     </div>
-                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none text-gray-500' />
+                                    <input type="text" defaultValue={"Ahmed"} className='w-full outline-none focus:outline-none text-gray-500' disabled />
                                 </div>
                             </div>
 
@@ -206,8 +214,8 @@ function Summary() {
                         <div className="flex flex-col lg:flex-row mt-5 gap-5 items-stretch">
 
                             {/* Email */}
-                            <div className="flex-1 bg-gray-200">
-                                <div className="border-gray-400 border-2 rounded-lg p-1 px-2 h-full">
+                            <div className="flex-1">
+                                <div className="bg-gray-200 border-gray-400 border-2 rounded-lg p-1 px-2 h-full">
                                     <p className="text-xs text-gray-500">
                                         Enter email address
                                     </p>
@@ -215,15 +223,15 @@ function Summary() {
                                     <input
                                         type="text"
                                         defaultValue="ahmad@example.com"
-                                        className="w-full outline-none focus:outline-none text-gray-500"
+                                        className="w-full outline-none focus:outline-none text-gray-500" disabled
                                     />
                                 </div>
                             </div>
 
 
                             {/* Mobile */}
-                            <div className="flex-1 bg-gray-200 ">
-                                <div className="border-gray-400 border-2 rounded-lg flex items-center h-full pr-3">
+                            <div className="flex-1">
+                                <div className="bg-gray-200 border-gray-400 border-2 rounded-lg flex items-center h-full pr-3">
 
                                     <div className="flex items-center gap-2 px-3">
                                         <img
@@ -239,7 +247,7 @@ function Summary() {
                                     <input
                                         type="text"
                                         placeholder="Mobile Number*"
-                                        className="flex-1 p-2 border-l border-gray-400 outline-none focus:outline-none"
+                                        className="flex-1 p-2 border-l border-gray-400 outline-none focus:outline-none" disabled
                                     />
 
                                     <div className='text-green-600 text-sm'>
@@ -290,37 +298,85 @@ function Summary() {
 
 
                         <div className='flex-1 flex-col lg:flex-row'>
-                            <h1 className='font-medium text-lg mb-5'>Questions for our team <span className='text-sm text-gray-500 font-normal'>(optional)</span><span className='text-red-600 '>*</span></h1>
+                            <h1 className='font-medium text-lg mb-5'>
+                                Questions for our team <span className='text-sm text-gray-500 font-normal'>(optional)</span>
+                                <span className='text-red-600 '>*</span>
+                            </h1>
 
                             <div className='flex gap-3 flex-col lg:flex-row'>
+
+                                {/* Arabic-speaking assistant button */}
                                 <div className=''>
-                                    <button className='bg-gray-200 text-base p-1 px-4 rounded-lg'>
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsArabicRequested(!isArabicRequested)}
+                                        className={`text-base p-1 px-4 rounded-lg transition flex items-center ${isArabicRequested ? 'bg-red-600 text-white' : 'bg-gray-200 text-black'
+                                            }`}
+                                    >
+                                        {isArabicRequested && (
+                                            <i className="bi bi-check2 text-white mr-2"></i>
+                                        )}
                                         Request Arabic-speaking assistant
                                     </button>
                                 </div>
 
+                                {/* Second model button */}
                                 <div className=''>
-                                    <button className='bg-gray-200 text-base p-1 px-4 rounded-lg'>
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsSecondModelRequested(!isSecondModelRequested)}
+                                        className={`text-base p-1 px-4 rounded-lg transition flex items-center ${isSecondModelRequested ? 'bg-red-600 text-white' : 'bg-gray-200 text-black'
+                                            }`}
+                                    >
+                                        {isSecondModelRequested && (
+                                            <i className="bi bi-check2 text-white mr-2"></i>
+                                        )}
                                         Request a second model
                                     </button>
                                 </div>
+
                             </div>
 
+                            {/* Conditionally render the select container */}
+                            {showDropdown && (
+                                <div className="mt-5">
+                                    <div className="relative">
+                                        <select
+                                            className={`w-full appearance-none rounded-lg border-2 border-gray-400 bg-white p-2 pr-10 outline-none ${selectedModel ? "text-black" : "text-gray-500"}`}
+                                            value={selectedModel}
+                                            onChange={(e) => setSelectedModel(e.target.value)}
+                                        >
+
+                                            <option value="" disabled>
+                                                Select a model
+                                            </option>
+                                            <option value="LX600" className='text-black'>LX600</option>
+                                        </select>
+
+                                        <i className="bi bi-chevron-down absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500"></i>
+                                    </div>
+
+                                    {/* Conditionally render error text */}
+                                    {showError && (
+                                        <p className="mt-2 text-sm text-red-500">
+                                            Model is required
+                                        </p>
+                                    )}
+                                </div>
+                            )}
+
                             <div className='mt-5'>
-                                <textarea name="" id="" className='w-full border-gray-400 border-2 rounded-lg p-2 resize-none' placeholder='Type your question...'></textarea>
+                                <textarea className='w-full border-gray-400 border-2 rounded-lg p-2 resize-none' placeholder='Type your question...'></textarea>
                             </div>
 
                             <div className='flex justify-end mt-2 text-sm text-gray-500'>
                                 <p>0/280</p>
                             </div>
-
                         </div>
 
 
-
-
-
                     </div>
+
 
                     <div className='pr-4'>
                         <hr className="my-7 border-gray-400" />

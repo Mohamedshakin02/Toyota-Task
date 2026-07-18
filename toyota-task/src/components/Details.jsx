@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
 // Import Swiper React components
@@ -16,7 +17,15 @@ import uae from "../assets/uae flag.png";
 
 
 function Details() {
+    const [isArabicRequested, setIsArabicRequested] = useState(false);
+    const [isSecondModelRequested, setIsSecondModelRequested] = useState(false);
+    const [selectedModel, setSelectedModel] = useState("");
+
+    const showDropdown = isSecondModelRequested && !isArabicRequested;
+    const showError = showDropdown && selectedModel === "";
+
     return (
+
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
             <div className="flex items-center gap-3">
                 <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
@@ -188,8 +197,8 @@ function Details() {
 
 
                             {/* Mobile */}
-                            <div className="flex-1 bg-gray-200 ">
-                                <div className="border-gray-400 border-2 rounded-lg flex items-center h-full pr-3">
+                            <div className="flex-1">
+                                <div className="bg-gray-200 border-gray-400 border-2 rounded-lg flex items-center h-full pr-3">
 
                                     <div className="flex items-center gap-2 px-3">
                                         <img
@@ -256,37 +265,86 @@ function Details() {
 
 
                         <div className='flex-1 flex-col lg:flex-row'>
-                            <h1 className='font-medium text-lg mb-5'>Questions for our team <span className='text-sm text-gray-500 font-normal'>(optional)</span><span className='text-red-600 '>*</span></h1>
+                            <h1 className='font-medium text-lg mb-5'>
+                                Questions for our team <span className='text-sm text-gray-500 font-normal'>(optional)</span>
+                                <span className='text-red-600 '>*</span>
+                            </h1>
 
                             <div className='flex gap-3 flex-col lg:flex-row'>
+
+                                {/* Arabic-speaking assistant button */}
                                 <div className=''>
-                                    <button className='bg-gray-200 text-base p-1 px-4 rounded-lg'>
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsArabicRequested(!isArabicRequested)}
+                                        className={`text-base p-1 px-4 rounded-lg transition flex items-center ${isArabicRequested ? 'bg-red-600 text-white' : 'bg-gray-200 text-black'
+                                            }`}
+                                    >
+                                        {isArabicRequested && (
+                                            <i className="bi bi-check2 text-white mr-2"></i>
+                                        )}
                                         Request Arabic-speaking assistant
                                     </button>
                                 </div>
 
+                                {/* Second model button */}
                                 <div className=''>
-                                    <button className='bg-gray-200 text-base p-1 px-4 rounded-lg'>
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsSecondModelRequested(!isSecondModelRequested)}
+                                        className={`text-base p-1 px-4 rounded-lg transition flex items-center ${isSecondModelRequested ? 'bg-red-600 text-white' : 'bg-gray-200 text-black'
+                                            }`}
+                                    >
+                                        {isSecondModelRequested && (
+                                            <i className="bi bi-check2 text-white mr-2"></i>
+                                        )}
                                         Request a second model
                                     </button>
                                 </div>
+
                             </div>
 
+                            {/* Conditionally render the select container */}
+                            {showDropdown && (
+                                <div className="mt-5">
+                                    <div className="relative">
+                                        <select
+                                            className={`w-full appearance-none rounded-lg border-2 border-gray-400 bg-white p-2 pr-10 outline-none ${selectedModel ? "text-black" : "text-gray-500"}`}
+                                            value={selectedModel}
+                                            onChange={(e) => setSelectedModel(e.target.value)}
+                                        >
+                                            
+                                            <option value="" disabled>
+                                                Select a model
+                                            </option>
+                                            <option value="LX600" className='text-black'>LX600</option>
+                                        </select>
+
+                                        <i className="bi bi-chevron-down absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500"></i>
+                                    </div>
+
+                                    {/* Conditionally render error text */}
+                                    {showError && (
+                                        <p className="mt-2 text-sm text-red-500">
+                                            Model is required
+                                        </p>
+                                    )}
+                                </div>
+                            )}
+
                             <div className='mt-5'>
-                                <textarea name="" id="" className='w-full border-gray-400 border-2 rounded-lg p-2 resize-none' placeholder='Type your question...'></textarea>
+                                <textarea className='w-full border-gray-400 border-2 rounded-lg p-2 resize-none' placeholder='Type your question...'></textarea>
                             </div>
 
                             <div className='flex justify-end mt-2 text-sm text-gray-500'>
                                 <p>0/280</p>
                             </div>
-
                         </div>
 
 
-
-
-
                     </div>
+
+
 
                     <div className='pr-4'>
                         <hr className="my-7 border-gray-400" />
