@@ -13,7 +13,7 @@ function LicenseError() {
         <>
             <div className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
                 <div className='w-full p-4 bg-red-100 border-2 border-red-500 flex items-center gap-4 rounded-sm'>
-                    <div><i class="bi bi-exclamation-circle text-red-500 text-xl"></i></div>
+                    <div><i className="bi bi-exclamation-circle text-red-500 text-xl"></i></div>
                     <div className='text-red-500 flex flex-col gap-0.5'>
                         <h1 className='font-semibold'>Something went wrong</h1>
                         <p>We're having trouble connecting. Your details are saved locally; we will retry automatically.</p>
@@ -62,7 +62,7 @@ function LicenseError() {
                                         </div>
 
                                         <div>
-                                            <i class="bi bi-check-circle-fill text-2xl text-green-500"></i>
+                                            <i className="bi bi-check-circle-fill text-2xl text-green-500"></i>
                                         </div>
                                     </div>
 
@@ -86,7 +86,7 @@ function LicenseError() {
                                         </div>
 
                                         <div>
-                                            <i class="bi bi-check-circle-fill text-2xl text-green-500"></i>
+                                            <i className="bi bi-check-circle-fill text-2xl text-green-500"></i>
                                         </div>
                                     </div>
 
@@ -112,7 +112,7 @@ function LicenseError() {
                                     </div>
                                 </div>
                                 <div className='col-span-4 flex flex-col items-center justify-center rounded-lg text-gray-600 w-full gap-y-5'>
-                                    <div> <i class="bi bi-check-circle-fill text-2xl text-green-500"></i> </div>
+                                    <div> <i className="bi bi-check-circle-fill text-2xl text-green-500"></i> </div>
                                     <div className='lg:text-xl text-center text-green-500'> <p>Waiver accepted</p> </div>
                                     <div>
                                         <p className='underline text-black text-lg'>Click to view</p>
@@ -160,7 +160,7 @@ function LicenseError() {
                             </div>
 
                             <div>
-                                <Link to="" className="text-red-600 underline"><i class="bi bi-send-fill mr-3"></i>Get Directions</Link>
+                                <Link to="" className="text-red-600 underline"><i className="bi bi-send-fill mr-3"></i>Get Directions</Link>
                             </div>
 
 

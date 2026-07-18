@@ -265,7 +265,7 @@ function RescheduleDate() {
 
                             <div className=''>
                                 <button className='bg-red-600 text-white text-base p-2 px-3 rounded-lg'>
-                                    <i class="bi bi-check2 text-white mr-2"></i>
+                                    <i className="bi bi-check2 text-white mr-2"></i>
                                     09:00 AM
                                 </button>
                             </div>

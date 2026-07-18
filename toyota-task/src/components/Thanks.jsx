@@ -41,7 +41,7 @@ function Thanks() {
                                 </div>
 
                                 <div>
-                                    <Link to="" className="text-red-600 underline"><i class="bi bi-send-fill mr-3 text-sm"></i>Get Directions</Link>
+                                    <Link to="" className="text-red-600 underline"><i className="bi bi-send-fill mr-3 text-sm"></i>Get Directions</Link>
                                 </div>
 
 
@@ -58,12 +58,12 @@ function Thanks() {
 
                             <ul className='text-bas space-y-2'>
                                 <li className='flex lg:items-center'>
-                                    <i class="bi bi-circle-fill text-xs pr-1 mt-1 lg:mt-0 text-red-600"></i>
+                                    <i className="bi bi-circle-fill text-xs pr-1 mt-1 lg:mt-0 text-red-600"></i>
                                     We have sent the details of your test drive request.
                                 </li>
 
                                 <li className='flex lg:items-center'>
-                                    <i class="bi bi-circle-fill text-xs pr-1 mt-1 lg:mt-0 text-red-600"></i>
+                                    <i className="bi bi-circle-fill text-xs pr-1 mt-1 lg:mt-0 text-red-600"></i>
                                     One of our team will be in touch shortly to confirm your booking.
                                 </li>
                             </ul>
@@ -79,7 +79,7 @@ function Thanks() {
                                 </div>
 
                                 <div className=''>
-                                    <i class="bi bi-telephone text-3xl text-red-600"></i>
+                                    <i className="bi bi-telephone text-3xl text-red-600"></i>
                                 </div>
                             </div>
 
@@ -90,7 +90,7 @@ function Thanks() {
                                 </div>
 
                                 <div>
-                                    <i class="bi bi-whatsapp text-3xl text-green-500"></i>
+                                    <i className="bi bi-whatsapp text-3xl text-green-500"></i>
                                 </div>
                             </div>
 

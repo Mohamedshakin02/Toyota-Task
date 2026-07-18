@@ -52,7 +52,7 @@ function Reschedule() {
                         </div>
 
                         <div>
-                            <Link to="" className="text-red-600 underline"><i class="bi bi-send-fill mr-3"></i>Get Directions</Link>
+                            <Link to="" className="text-red-600 underline"><i className="bi bi-send-fill mr-3"></i>Get Directions</Link>
                         </div>
 
 

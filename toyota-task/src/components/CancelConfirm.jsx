@@ -14,7 +14,7 @@ function CancelConfirm() {
 
             <div className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
                 <div className='w-full p-4 bg-red-100 border-2 border-red-500 flex items-center gap-4 rounded-sm'>
-                    <div><i class="bi bi-exclamation-circle text-red-500 text-xl"></i></div>
+                    <div><i className="bi bi-exclamation-circle text-red-500 text-xl"></i></div>
                     <div className='text-red-500 flex flex-col gap-0.5'>
                         <h1 className='font-semibold'>Your booking has been cancelled</h1>
                         <p>We look forward to seeing you behind the wheel another time.</p>
@@ -50,7 +50,7 @@ function CancelConfirm() {
                             </div>
 
                             <div>
-                                <Link to="" className="text-red-600 underline"><i class="bi bi-send-fill mr-3"></i>Get Directions</Link>
+                                <Link to="" className="text-red-600 underline"><i className="bi bi-send-fill mr-3"></i>Get Directions</Link>
                             </div>
 
 

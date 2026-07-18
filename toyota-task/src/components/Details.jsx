@@ -62,7 +62,7 @@ function Details() {
 
                                     <SwiperSlide className='!w-auto'>
                                         <button className='bg-red-600 text-base text-white p-1 px-4 rounded-lg'>
-                                            <i class="bi bi-check2 text-white mr-2"></i>
+                                            <i className="bi bi-check2 text-white mr-2"></i>
                                             Finance
                                         </button>
                                     </SwiperSlide>
@@ -93,7 +93,7 @@ function Details() {
 
                                     <SwiperSlide className="!w-auto">
                                         <button className="bg-red-600 text-base text-white p-1 px-4 rounded-lg">
-                                            <i class="bi bi-check2 text-white mr-2"></i>
+                                            <i className="bi bi-check2 text-white mr-2"></i>
                                             Within 60 days
                                         </button>
                                     </SwiperSlide>
@@ -244,7 +244,7 @@ function Details() {
 
                                 <div className=''>
                                     <button className='bg-red-600 text-white text-base p-1 px-4 rounded-lg'>
-                                        <i class="bi bi-check2 text-white mr-2"></i>
+                                        <i className="bi bi-check2 text-white mr-2"></i>
                                         Email
                                     </button>
                                 </div>
@@ -328,7 +328,7 @@ function Details() {
 
                         <div className='mt-10 lg:mt-0'>
                             <button className='w-full lg:w-auto py-3 px-7 lg:py-2 lg:px-7  bg-gray-400 text-white'>
-                                Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
+                                Next <i className="bi bi-arrow-right-short hidden lg:inline-block"></i>
                             </button>
                         </div>
                     </div>

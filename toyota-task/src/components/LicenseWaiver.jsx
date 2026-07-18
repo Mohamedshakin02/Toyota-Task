@@ -49,7 +49,7 @@ function LicenseWaiver() {
                                     </div>
 
                                     <div>
-                                        <i class="bi bi-check-circle-fill text-2xl text-green-500"></i>
+                                        <i className="bi bi-check-circle-fill text-2xl text-green-500"></i>
                                     </div>
                                 </div>
 
@@ -73,7 +73,7 @@ function LicenseWaiver() {
                                     </div>
 
                                     <div>
-                                        <i class="bi bi-check-circle-fill text-2xl text-green-500"></i>
+                                        <i className="bi bi-check-circle-fill text-2xl text-green-500"></i>
                                     </div>
                                 </div>
 
@@ -99,7 +99,7 @@ function LicenseWaiver() {
                                 </div>
                             </div>
                             <div className='col-span-4 flex flex-col items-center justify-center rounded-lg text-gray-600 w-full gap-y-5'>
-                                <div> <i class="bi bi-check-circle-fill text-2xl text-green-500"></i> </div>
+                                <div> <i className="bi bi-check-circle-fill text-2xl text-green-500"></i> </div>
                                 <div className='lg:text-xl text-center text-green-500'> <p>Waiver accepted</p> </div>
                                 <div>
                                     <p className='underline text-black text-lg'>Click to view</p>
@@ -147,7 +147,7 @@ function LicenseWaiver() {
                         </div>
 
                         <div>
-                            <Link to="" className="text-red-600 underline"><i class="bi bi-send-fill mr-3"></i>Get Directions</Link>
+                            <Link to="" className="text-red-600 underline"><i className="bi bi-send-fill mr-3"></i>Get Directions</Link>
                         </div>
 
 

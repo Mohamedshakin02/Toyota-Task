@@ -238,7 +238,7 @@ function Date() {
 
                         <div className=''>
                             <button className='bg-red-600 text-white text-base p-2 px-3 rounded-lg'>
-                                <i class="bi bi-check2 text-white mr-2"></i>
+                                <i className="bi bi-check2 text-white mr-2"></i>
                                 09:00 AM
                             </button>
                         </div>
@@ -264,7 +264,7 @@ function Date() {
 
                     <div className='mt-10 flex justify-end'>
                         <button className='w-full lg:w-auto py-3 px-7 lg:py-2 lg:px-7 bg-red-600 text-white'>
-                            Next <i class="bi bi-arrow-right-short hidden lg:inline-block"></i>
+                            Next <i className="bi bi-arrow-right-short hidden lg:inline-block"></i>
                         </button>
                     </div>
 

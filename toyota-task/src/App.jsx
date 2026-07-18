@@ -24,6 +24,7 @@ import RescheduleDatePage from './pages/RescheduleDatePage'
 import RescheduleConfirmPage from './pages/RescheduleConfirmPage'
 import CancelModal from './pages/CancelModal'
 import CancelConfirmPage from './pages/CancelConfirmPage'
+import AgreementModal from './pages/AgreementModal'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -51,6 +52,7 @@ function App() {
         <Route path="/RescheduleConfirm" element={<RescheduleConfirmPage/>} />
         <Route path="/CancelModal" element={<CancelModal/>} />
         <Route path="/CancelConfirm" element={<CancelConfirmPage/>} />
+        <Route path="/Agreement" element={<AgreementModal/>} />
       </Routes>
     </>
   )
