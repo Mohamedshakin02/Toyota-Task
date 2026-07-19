@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import PageHeader from "./PageHeader";
+import CategoryTabs from "./CategoryTabs";
+
 import car1 from "../assets/cars/car 1.png";
 import car2 from "../assets/cars/car 2.png";
 import car3 from "../assets/cars/car 3.png";
@@ -43,42 +46,10 @@ function Cars() {
     return (
         <section className='container px-4 lg:px-36 mx-auto pt-12 lg:pt-15 bg-[#F9F9F9]'>
 
-            <div className="flex items-center gap-3">
-                <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
-                <h1 className="text-3xl lg:text-2xl font-bold">
-                    Select car model
-                </h1>
-            </div>
+            <PageHeader title="Select car model" />
 
             <div className="mt-5">
-                <ul className="flex items-center gap-5 text-xl lg:text-base font-medium">
-                    {categories.map((category) => (
-                        <li
-                            key={category.name}
-                            className={`
-                justify-center
-                border-b-3
-                ${category.active
-                                    ? "border-red-600 px-2"
-                                    : "border-transparent"
-                                }
-              `}
-                        >
-                            <Link
-                                to=""
-                                className={`
-                  flex items-center
-                  ${category.active
-                                        ? "text-red-600"
-                                        : "text-gray-400"
-                                    }
-                `}
-                            >
-                                {category.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <CategoryTabs categories={categories} />
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 py-10">
