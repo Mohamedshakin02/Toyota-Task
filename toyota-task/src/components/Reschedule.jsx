@@ -7,6 +7,8 @@ import car from "../assets/cars/car 15.png";
 import EmiratesFront2 from "../assets/Emirates-front2.png";
 import EmiratesBack from "../assets/Emirates-back.png";
 
+import Button from "./Button"
+
 function Reschedule() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
@@ -17,13 +19,24 @@ function Reschedule() {
                 <p className='text-lg'>Here are the details of your test drive booking. What would you like to do next?</p>
             </div>
 
-            <div className='mt-9 col-span-2 flex justify-center gap-5'>
-                <button className='w-full lg:w-1/4 py-3 lg:py-3 border-2 border-red-500 text-red-500 text-lg'>
-                    Cancel
-                </button>
-                <button className='w-full lg:w-1/4 py-3 lg:py-3  bg-red-500 text-white text-lg'>
-                    Reshedule
-                </button>
+            <div className="mt-9 col-span-2 flex justify-center gap-5">
+
+                <Button
+                    label="Cancel"
+                    variant="outline"
+                    width="quarter"
+                    size="wide"
+                    className="text-lg"
+                />
+
+                <Button
+                    label="Reshedule"
+                    variant="primary"
+                    width="quarter"
+                    size="wide"
+                    className="text-lg"
+                />
+
             </div>
 
             <div className='mt-12 flex flex-col lg:flex-row rounded-lg border-dashed border-2 border-gray-400'>
@@ -69,11 +82,15 @@ function Reschedule() {
                     <p className='text-lg'>Upload now for a faster check-in, or use the link we've sent via [WhatsApp/Email] to provide it later at your convenience.</p>
                 </div>
                 <div>
-                    <button className='p-2 px-7 mt-5 lg:mt-0 border-2 border-red-600 text-red-600 whitespace-nowrap'>
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        width="auto"
+                        className="mt-5 lg:mt-0 w-auto! px-7 whitespace-nowrap"
+                    >
                         <span className="lg:hidden">Upload now</span>
-
                         <span className="hidden lg:inline">Manage my documents</span>
-                    </button>
+                    </Button>
                 </div>
             </div>
 

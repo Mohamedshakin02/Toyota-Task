@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
+import PageHeader from "./PageHeader";
+import Button from "./Button"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -25,12 +27,8 @@ function Summary() {
 
     return (
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex items-center gap-3">
-                <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
-                <h1 className="text-3xl lg:text-2xl font-bold">
-                    Summary
-                </h1>
-            </div>
+
+            <PageHeader title="Summary" />
 
             <div className='my-10 mb-5 lg:mb-15'>
                 <form action="">
@@ -417,9 +415,11 @@ function Summary() {
                         </div>
 
                         <div className='mt-10 lg:mt-0'>
-                            <button className='w-full lg:w-auto py-3 px-7 lg:py-2 lg:px-7  bg-red-600 text-white'>
-                                Confirm <i className="bi bi-arrow-right-short hidden lg:inline-block"></i>
-                            </button>
+                            <Button
+                                label="Next"
+                                variant="primary"
+                                showArrow
+                            />
                         </div>
                     </div>
 

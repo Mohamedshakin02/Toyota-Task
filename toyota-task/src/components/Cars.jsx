@@ -44,7 +44,7 @@ function Cars() {
     ];
 
     return (
-        <section className='container px-4 lg:px-36 mx-auto pt-12 lg:pt-15 bg-[#F9F9F9]'>
+        <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15 bg-[#F9F9F9]'>
 
             <PageHeader title="Select car model" />
 

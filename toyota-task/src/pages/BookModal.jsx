@@ -4,6 +4,7 @@ import Cars from "../components/Cars";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import uae from "../assets/uae flag.png";
+import Button from "../components/Button"
 
 function BookModal() {
     const [open, setOpen] = useState(true);
@@ -61,12 +62,12 @@ function BookModal() {
                         </p>
                     </div>
 
-                    <button
+                    <Button
+                        label="Send Verification Code"
                         type="submit"
-                        className="bg-gray-500 text-white px-4 py-3 w-full"
-                    >
-                        Send Verification Code
-                    </button>
+                        variant="secondary"
+                        width="full"
+                    />
                 </form>
             </Modal>
         </>

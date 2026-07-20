@@ -1,17 +1,20 @@
 import React from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
-
+import PageHeader from "./PageHeader";
 import uae from "../assets/uae flag.png";
+import Button from "./Button"
 
 function Thanks() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex items-center gap-3">
-                <h1 className="text-3xl lg:text-2xl font-bold">
-                    Thank you for request test drive
-                </h1>
-            </div>
+
+            <PageHeader
+                title="Thank you for request test drive"
+                showBackButton={false}
+            />
+
+
 
             <div className='my-10 mb-5 lg:mb-15'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 mb-10 gap-y-7 lg:gap-x-7'>
@@ -114,9 +117,10 @@ function Thanks() {
                     </div>
 
                     <div className='col-span-2 order-4 flex justify-end'>
-                        <button className='w-full lg:w-auto py-3 px-7 lg:py-2 lg:px-7 bg-red-600 text-white'>
-                            Explore Land Cruiser Hybrid
-                        </button>
+                        <Button
+                            label="Explore Land Cruiser Hybrid"
+                            variant="primary"
+                        />
                     </div>
 
                 </div>

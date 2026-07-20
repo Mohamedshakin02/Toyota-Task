@@ -7,6 +7,8 @@ import car from "../assets/cars/car 15.png";
 import EmiratesFront2 from "../assets/Emirates-front2.png";
 import EmiratesBack from "../assets/Emirates-back.png";
 
+import Button from "./Button"
+
 function CancelConfirm() {
     return (
 
@@ -62,12 +64,21 @@ function CancelConfirm() {
                 </div>
 
                 <div className='mt-9 mb-15 col-span-2 flex flex-col-reverse lg:flex-row justify-center gap-5'>
-                    <button className='w-full lg:w-1/4 py-3 lg:py-3 border-2 border-red-500 text-red-500 text-lg'>
-                        Return to Toyota.ae
-                    </button>
-                    <button className='w-full lg:w-1/4 py-3 lg:py-3  bg-red-500 text-white text-lg'>
-                        Make a new booking
-                    </button>
+                    <Button
+                        label="Return to Toyota.ae"
+                        variant="outline"
+                        width="quarter"
+                        size="wide"
+                        className="text-lg"
+                    />
+
+                    <Button
+                        label="Make a new booking"
+                        variant="primary"
+                        width="quarter"
+                        size="wide"
+                        className="text-lg"
+                    />
                 </div>
 
 

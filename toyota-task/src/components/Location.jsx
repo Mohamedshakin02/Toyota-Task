@@ -4,6 +4,7 @@ import location2 from "../assets/locations/Location 2.png";
 import location3 from "../assets/locations/Location 3.png";
 import location4 from "../assets/locations/Location 4.png";
 import { Link } from 'react-router-dom';
+import PageHeader from "./PageHeader";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -19,12 +20,8 @@ import 'swiper/css/pagination';
 function Location() {
     return (
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex items-center gap-3">
-                <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
-                <h1 className="text-3xl lg:text-2xl font-bold">
-                    Location & Date
-                </h1>
-            </div>
+
+            <PageHeader title="Location & Date" />
 
             <div className='my-10 mb-5 lg:mb-15'>
 

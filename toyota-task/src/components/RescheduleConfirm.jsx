@@ -1,6 +1,7 @@
 import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
+import Button from "./Button"
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -70,11 +71,15 @@ function RescheduleConfirm() {
                     <p className='text-lg'>Upload now for a faster check-in, or use the link we've sent via [WhatsApp/Email] to provide it later at your convenience.</p>
                 </div>
                 <div>
-                    <button className='p-2 px-7 mt-5 lg:mt-0 border-2 border-red-600 text-red-600 whitespace-nowrap'>
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        width="auto"
+                        className="mt-5 lg:mt-0 w-auto! px-7 whitespace-nowrap"
+                    >
                         <span className="lg:hidden">Upload now</span>
-
                         <span className="hidden lg:inline">Manage my documents</span>
-                    </button>
+                    </Button>
                 </div>
             </div>
 

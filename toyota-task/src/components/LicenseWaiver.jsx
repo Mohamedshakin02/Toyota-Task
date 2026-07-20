@@ -1,6 +1,7 @@
 import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
+import Button from "./Button"
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -116,9 +117,13 @@ function LicenseWaiver() {
             </div>
 
             <div className='col-span-2 flex justify-end'>
-                <button className='w-full lg:w-auto py-3 px-7 lg:py-3 lg:px-7 bg-red-500 text-white'>
-                    Submit
-                </button>
+                <Button
+                    label="Submit"
+                    variant="primary"
+                    width="auto"
+                    size="md"
+                    className="lg:py-3"
+                />
             </div>
 
             <div className='mt-12 mb-15 flex flex-col lg:flex-row rounded-lg border-dashed border-2 border-gray-400'>

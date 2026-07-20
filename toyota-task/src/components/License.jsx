@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
 
+import Button from "./Button"
+
 function License() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
@@ -68,10 +70,14 @@ function License() {
                 </div>
             </div>
 
-            <div className='col-span-2 flex justify-end'>
-                <button className='w-full lg:w-auto py-3 px-7 lg:py-3 lg:px-7 bg-gray-500 text-white'>
-                    Submit
-                </button>
+            <div className="col-span-2 flex justify-end">
+                <Button
+                    label="Submit"
+                    variant="secondary"
+                    width="auto"
+                    size="md"
+                    className="lg:py-3"
+                />
             </div>
 
             <div className='mt-12 mb-15 flex flex-col lg:flex-row rounded-lg border-dashed border-2 border-gray-400'>

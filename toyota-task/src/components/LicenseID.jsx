@@ -1,6 +1,7 @@
 import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
+import Button from "./Button"
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -61,7 +62,7 @@ function LicenseID() {
                                 <div className='h-full p-4'>
                                     <img src={document} alt="Waiver Document" className="w-full h-full object-cover" />
                                 </div>
-                                
+
                             </div>
                             <div className='col-span-4 flex flex-col items-center justify-center rounded-lg text-gray-600 w-full gap-y-5'>
                                 <div> <i className="bi bi-pencil text-2xl lg:text-3xl"></i> </div>
@@ -72,16 +73,20 @@ function LicenseID() {
                         <div className='mt-3 text-sm text-gray-600 invisible'>
                             <p>Supported formats PDF, .JPEG, and .PNG, up to 5MB</p>
                         </div>
-                       
+
                     </div>
 
                 </div>
             </div>
 
             <div className='col-span-2 flex justify-end'>
-                <button className='w-full lg:w-auto py-3 px-7 lg:py-3 lg:px-7 bg-gray-500 text-white'>
-                    Submit
-                </button>
+                <Button
+                    label="Submit"
+                    variant="secondary"
+                    width="auto"
+                    size="md"
+                    className="lg:py-3"
+                />
             </div>
 
             <div className='mt-12 mb-15 flex flex-col lg:flex-row rounded-lg border-dashed border-2 border-gray-400'>

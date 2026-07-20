@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Reschedule from "@/components/Reschedule";
 import Modal from "../components/Modal";
+import Button from "../components/Button"
 
 function CancelModal() {
     const [open, setOpen] = useState(true);
@@ -36,13 +37,19 @@ function CancelModal() {
                 </div>
 
                 <div className="mt-6 flex flex-col justify-center gap-5">
-                    <button className="w-full py-3 bg-red-500 text-white lg:rounded-md">
-                        Confirm cancellation
-                    </button>
+                    <Button
+                        label="Confirm cancellation"
+                        variant="primary"
+                        width="full"
+                        rounded="md"
+                    />
 
-                    <button className="w-full py-3 border-2 border-red-500 text-red-500 lg:rounded-md">
-                        Reschedule
-                    </button>
+                    <Button
+                        label="Reschedule"
+                        variant="outline"
+                        width="full"
+                        rounded="md"
+                    />
                 </div>
 
             </Modal>

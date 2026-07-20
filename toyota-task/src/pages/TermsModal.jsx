@@ -6,6 +6,7 @@ import uae from "../assets/uae flag.png";
 import Reschedule from '@/components/Reschedule'
 import LicenseIDFull from '@/components/LicenseIDFull';
 import Modal from "../components/Modal";
+import Button from "../components/Button"
 
 function TermsModal() {
     const [open, setOpen] = useState(true)
@@ -42,13 +43,21 @@ function TermsModal() {
 
                         <div className="flex justify-between lg:justify-normal gap-5">
 
-                            <button className="lg:w-full px-4 lg:px-0 py-2 lg:py-3 border-2 border-red-500 text-red-500">
-                                Decline
-                            </button>
+                            <Button
+                                label="Decline"
+                                variant="outline"
+                                width="full"
+                                size="sm"
+                                className="w-auto! lg:w-full! lg:px-0 lg:py-3"
+                            />
 
-                            <button className="lg:w-full px-4 lg:px-0 py-2 lg:py-3 bg-red-500 text-white">
-                                Accept
-                            </button>
+                            <Button
+                                label="Accept"
+                                variant="primary"
+                                width="full"
+                                size="sm"
+                                className="w-auto! lg:w-full! lg:px-0 lg:py-3"
+                            />
 
                         </div>
 
