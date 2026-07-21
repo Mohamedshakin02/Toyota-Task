@@ -2,6 +2,9 @@ import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
 import Button from "./Button"
+import CarCard_2 from "./CarCard_2";
+import LicenseCard from "./LicenceCard";
+import LicenseContainer from "./LicenseContainer";
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -18,7 +21,7 @@ function LicenseWaiver() {
                 <p className='text-lg'>Please upload clear photos of both the front and back of your valid driver's license.</p>
             </div>
 
-            <div className='mb-5 lg:mb-12'>
+            <div className='mb-12'>
                 <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-10 items-stretch">
 
 
@@ -31,61 +34,25 @@ function LicenseWaiver() {
 
                         </div>
 
-                        <div className='flex-1 flex gap-x-5'>
-                            <div className='flex flex-col rounded-lg border-2 border-green-500 text-gray-600 w-full gap-y-2 p-4 justify-center'>
-                                <div>
-                                    <img src={EmiratesFront2} alt="" />
-                                </div>
-                                <div className='h-2 w-full bg-gray-300 opacity-0'>
-                                    <div className='h-full w-3/5 bg-black'></div>
-                                </div>
+                        <LicenseContainer status="verified" preserveHeight>
+                            <LicenseCard
+                                state="verified"
+                                image={EmiratesFront2}
+                                fileName="Front.JPG (2MB)"
+                                borderColor="border-green-500"
+                                showRemove
+                                showCheck
+                            />
 
-                                <div className='flex justify-between items-center'>
-                                    <div>
-                                        <div> <p>Front.JPG (2MB)</p> </div>
-
-                                        <div>
-                                            <p className='underline text-black text-lg'>Remove</p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <i className="bi bi-check-circle-fill text-2xl text-green-500"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div className='flex flex-col rounded-lg border-2 border-green-500 text-gray-600 w-full gap-y-2 p-4 justify-center'>
-                                <div>
-                                    <img src={EmiratesBack} alt="" />
-                                </div>
-                                <div className='h-2 w-full bg-gray-300 opacity-0'>
-                                    <div className='h-full w-3/5 bg-black'></div>
-                                </div>
-
-                                <div className='flex justify-between items-center'>
-                                    <div>
-                                        <div> <p>Front.JPG (2MB)</p> </div>
-
-                                        <div>
-                                            <p className='underline text-black text-lg'>Remove</p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <i className="bi bi-check-circle-fill text-2xl text-green-500"></i>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className='mt-3 text-sm text-green-600'>
-                            <p>Document successfully verified</p>
-                            <br className='xl:hidden'></br>
-
-                        </div>
+                            <LicenseCard
+                                state="verified"
+                                image={EmiratesBack}
+                                fileName="Back.JPG (2MB)"
+                                borderColor="border-green-500"
+                                showRemove
+                                showCheck
+                            />
+                        </LicenseContainer>
                     </div>
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
@@ -108,7 +75,7 @@ function LicenseWaiver() {
                             </div>
                         </div>
 
-                        <div className='mt-3 text-sm text-red-500 invisible'>
+                        <div className='mt-3 text-sm text-red-500 invisible hidden lg:inline-block'>
                             <p>To proceed with your best test drive, acceptance of the waiver is required</p>
                         </div>
                     </div>

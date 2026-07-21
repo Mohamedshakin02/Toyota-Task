@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
-import CarCard_2 from "./CarCard_2"
+import CarCard_2 from "./CarCard_2";
+import LicenseCard from "./LicenceCard";
+import LicenseContainer from "./LicenseContainer";
+
 
 import Button from "./Button"
 
@@ -27,21 +30,18 @@ function License() {
                             <h1 className='font-medium text-xl lg:text-lg mb-5'>Upload your driver's license<span className='text-red-600'>*</span></h1>
                         </div>
 
-                        <div className='flex-1 flex gap-x-5'>
-                            <div className='flex flex-col items-center justify-center aspect-square lg:aspect-auto rounded-lg border-dashed border-2 border-gray-400 text-gray-600 w-full gap-y-4 p-4'>
-                                <div> <i className="bi bi-plus-lg text-2xl"></i> </div>
-                                <div> <p>Upload back</p> </div>
-                            </div>
+                        <LicenseContainer status="upload">
+                            <LicenseCard
+                                state="empty"
+                                label="Upload front"
+                            />
 
-                            <div className='flex flex-col items-center justify-center aspect-square lg:aspect-auto rounded-lg border-dashed border-2 border-gray-400 text-gray-600 w-full gap-y-4 p-4'>
-                                <div> <i className="bi bi-plus-lg text-2xl"></i> </div>
-                                <div> <p>Upload back</p> </div>
-                            </div>
-                        </div>
+                            <LicenseCard
+                                state="empty"
+                                label="Upload back"
+                            />
+                        </LicenseContainer>
 
-                        <div className='mt-3 text-sm text-gray-600'>
-                            <p>Supported formats PDF, .JPEG, and .PNG, up to 5MB</p>
-                        </div>
                     </div>
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
