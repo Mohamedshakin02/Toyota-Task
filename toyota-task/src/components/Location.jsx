@@ -5,7 +5,7 @@ import location2 from "../assets/locations/Location 2.png";
 import location3 from "../assets/locations/Location 3.png";
 import location4 from "../assets/locations/Location 4.png";
 import { Link } from 'react-router-dom';
-import PageHeader from "./PageHeader";
+import SectionHeader from "./SectionHeader";
 import SliderTabs from "../components/SliderTabs";
 import LocationCard from "../components/LocationCard";
 // Import Swiper React components
@@ -61,7 +61,7 @@ function Location() {
     return (
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
 
-            <PageHeader title="Location & Date" />
+            <SectionHeader title="Location & Date" />
 
             <div className='my-10 mb-5 lg:mb-15'>
 

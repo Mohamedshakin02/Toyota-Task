@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import PageHeader from "./PageHeader";
+import SectionHeader from "./SectionHeader";
 import CategoryTabs from "./CategoryTabs";
 
 import car1 from "../assets/cars/car 1.png";
@@ -49,7 +49,7 @@ function Cars() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15 bg-[#F9F9F9]'>
 
-            <PageHeader title="Select car model" />
+            <SectionHeader title="Select car model" />
 
             <div className="mt-5">
                 <CategoryTabs

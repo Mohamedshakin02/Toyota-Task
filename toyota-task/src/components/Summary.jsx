@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
-import PageHeader from "./PageHeader";
+import SectionHeader from "./SectionHeader";
 import SliderTabs from "./SliderTabs";
 import FormQuestion from "./FormQuestion";
 import TabButton from "./TabButton";
@@ -66,11 +66,11 @@ function Summary() {
     return (
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
 
-            <PageHeader title="Summary" />
+            <SectionHeader title="Summary" />
 
             <div className='my-10 mb-5 lg:mb-15'>
                 <form action="">
-                    <div className='grid grid-cols-1 lg:grid-cols-3 mb-10 gap-y-7 lg:gap-x-7'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 mb-8 gap-y-7 lg:gap-x-7'>
 
                         <CarCard_2
                             car={car}
@@ -93,6 +93,8 @@ function Summary() {
                                 <FormQuestion
                                     question="How do you plan to purchase?"
                                     required
+                                    size='lg'
+                                    weight='bold'
                                 />
 
                                 <SliderTabs
@@ -106,6 +108,8 @@ function Summary() {
                                 <FormQuestion
                                     question="When are you planning to buy?"
                                     required
+                                    size='lg'
+                                    weight='bold'
                                 />
 
                                 <SliderTabs
@@ -119,25 +123,36 @@ function Summary() {
 
                     <div className="grid grid-cols-2 mb-5 pr-4">
                         <div className="col-span-2 lg:col-span-1">
-                            <h1 className="font-medium text-base mb-2">
-                                Any Special request
-                            </h1>
+                            <FormQuestion
+                                question="Any Special request"
+                                size='md'
+                                weight='normal'
+                                className='mb-2!'
+                            />
 
                             <textarea
                                 className="w-full border-gray-400 border-2 rounded-lg p-2 resize-none"
-                                placeholder="Any Special request (optional)"
+                                placeholder="Any special requests? (optional)"
                             ></textarea>
                         </div>
                     </div>
 
-                    <div>
-                        <h1 className="text-2xl lg:text-xl font-bold">
-                            Personal details <i className="bi bi-pencil text-lg ml-3 text-red-600"></i>
-                        </h1>
-                    </div>
+                    <SectionHeader
+                        title="Personal details"
+                        size="md"
+                        showBackButton={false}
+                        showEditIcon
+                    />
 
                     <div className='pr-4'>
-                        <h1 className='mt-5 font-medium text-lg mb-5'>Title<span className='text-red-600 '>*</span></h1>
+
+                        <FormQuestion
+                            question="Title"
+                            required
+                            size='md'
+                            weight='medium'
+                            className='my-5'
+                        />
 
                         <div className="flex gap-3">
                             {titleOptions.map((option) => (
@@ -190,7 +205,7 @@ function Summary() {
 
                             {/* Mobile */}
                             <div className="flex-1">
-                                <div className="bg-gray-200 border-gray-400 text-gray-500 border-2 rounded-lg flex items-center h-full pr-3">
+                                <div className="bg-gray-200 border-gray-400 text-gray-500 border-2 rounded-lg flex items-center h-full py-1.25 pr-3">
 
                                     <div className="flex items-center gap-2 px-3">
                                         <img
@@ -206,7 +221,7 @@ function Summary() {
                                     <input
                                         type="text"
                                         placeholder="Mobile Number*"
-                                        className="flex-1 p-2 border-l border-gray-400 outline-none focus:outline-none" disabled
+                                        className="h-full flex-1 p-2 border-l-2 border-gray-400 outline-none focus:outline-none" disabled
                                     />
 
                                     <div className='text-green-600 text-sm'>
@@ -218,25 +233,25 @@ function Summary() {
 
                         </div>
 
-                        <div className='flex justify-end mt-2 text-sm underline'>
+                        <div className='flex justify-end mt-2 text-sm underline hidden'>
                             <p>Change number</p>
                         </div>
-
 
 
                     </div>
 
                     <div className='pr-4'>
-                        <hr className="my-7 border-gray-400" />
+                        <hr className="my-7 mt-9 border-gray-400" />
                     </div>
 
 
-                    <div className='flex flex-col lg:flex-row gap-7 pr-4'>
+                    <div className='flex flex-col lg:flex-row lg:gap-7 pr-4'>
 
                         <div className='flex-1'>
                             <FormQuestion
                                 question="Contact preferences"
                                 required
+                                weight='bold'
                             />
 
                             <div className="flex gap-3">
@@ -257,11 +272,16 @@ function Summary() {
 
                         </div>
 
+                        <div className='pr-4 lg:hidden'>
+                            <hr className="my-7 border-gray-400" />
+                        </div>
+
 
                         <div className='flex-1 flex-col lg:flex-row'>
                             <FormQuestion
                                 question="Questions for our team"
                                 optional
+                                weight='bold'
                             />
 
                             <div className='flex gap-3 flex-wrap'>
@@ -328,11 +348,11 @@ function Summary() {
                     </div>
 
 
-                    <div className='pr-4'>
-                        <hr className="my-7 border-gray-400" />
+                    <div className='pr-4 hidden lg:block'>
+                        <hr className="my-7 mt-12 border-gray-400" />
                     </div>
 
-                    <div className='flex flex-col lg:flex-row lg:items-center justify-between mb pr-4'>
+                    <div className='flex flex-col lg:flex-row lg:items-center justify-between mt-7 lg:mt-0 pr-4'>
                         <div className="flex flex-col gap-4">
                             <CheckBox id="marketing">
                                 I consent to receive{" "}
@@ -355,7 +375,7 @@ function Summary() {
 
                         <div className='mt-10 lg:mt-0'>
                             <Button
-                                label="Next"
+                                label="Confirm"
                                 variant="primary"
                                 showArrow
                             />

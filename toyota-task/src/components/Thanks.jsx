@@ -1,7 +1,7 @@
 import React from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
-import PageHeader from "./PageHeader";
+import SectionHeader from "./SectionHeader";
 import uae from "../assets/uae flag.png";
 import Button from "./Button"
 import CarCard_2 from "./CarCard_2"
@@ -10,7 +10,7 @@ function Thanks() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
 
-            <PageHeader
+            <SectionHeader
                 title="Thank you for request test drive"
                 showBackButton={false}
             />

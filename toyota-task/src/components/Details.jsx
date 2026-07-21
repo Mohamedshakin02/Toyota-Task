@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import car from "../assets/cars/car 15.png";
 import { Link } from 'react-router-dom';
-import PageHeader from "./PageHeader";
+import SectionHeader from "./SectionHeader";
 import SliderTabs from "./SliderTabs";
 import FormQuestion from "./FormQuestion";
 import TabButton from "./TabButton";
@@ -66,7 +66,7 @@ function Details() {
     return (
 
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <PageHeader title="Confirm Details" />
+            <SectionHeader title="Confirm Details" />
 
 
             <div className='my-10 mb-5 lg:mb-15'>
@@ -90,6 +90,8 @@ function Details() {
                                 <FormQuestion
                                     question="How do you plan to purchase?"
                                     required
+                                    size='lg'
+                                    weight='bold'
                                 />
 
                                 <SliderTabs
@@ -103,6 +105,8 @@ function Details() {
                                 <FormQuestion
                                     question="When are you planning to buy?"
                                     required
+                                    size='lg'
+                                    weight='bold'
                                 />
 
                                 <SliderTabs
@@ -115,14 +119,21 @@ function Details() {
                         </div>
                     </div>
 
-                    <div>
-                        <h1 className="text-2xl lg:text-xl font-bold">
-                            Personal details
-                        </h1>
-                    </div>
+                    <SectionHeader
+                        title="Personal details"
+                        size="md"
+                        showBackButton={false}
+                    />
 
                     <div className='pr-4'>
-                        <h1 className='mt-5 font-medium text-lg mb-5'>Title<span className='text-red-600 '>*</span></h1>
+
+                        <FormQuestion
+                            question="Title"
+                            required
+                            size='md'
+                            weight='medium'
+                            className='my-5'
+                        />
 
                         <div className="flex gap-3">
                             {titleOptions.map((option) => (
@@ -172,7 +183,7 @@ function Details() {
 
                             {/* Mobile */}
                             <div className="flex-1">
-                                <div className="bg-gray-200 border-gray-400 border-2 rounded-lg flex items-center h-full pr-3">
+                                <div className="border-gray-400 border-2 rounded-lg flex items-center h-full py-1.25 pr-3">
 
                                     <div className="flex items-center gap-2 px-3">
                                         <img
@@ -188,7 +199,7 @@ function Details() {
                                     <input
                                         type="text"
                                         placeholder="Mobile Number*"
-                                        className="flex-1 p-2 border-l border-gray-400 outline-none focus:outline-none"
+                                        className="h-full flex-1 p-2 border-l-2 border-gray-400 outline-none focus:outline-none"
                                     />
 
                                     <div className='text-green-600 text-sm'>
@@ -213,12 +224,13 @@ function Details() {
                     </div>
 
 
-                    <div className='flex flex-col lg:flex-row gap-7 pr-4'>
+                    <div className='flex flex-col lg:flex-row lg:gap-7 pr-4'>
 
                         <div className='flex-1'>
                             <FormQuestion
                                 question="Contact preferences"
                                 required
+                                weight='bold'
                             />
 
                             <div className="flex gap-3">
@@ -239,11 +251,16 @@ function Details() {
 
                         </div>
 
+                        <div className='pr-4 lg:hidden'>
+                            <hr className="my-7 border-gray-400" />
+                        </div>
+
 
                         <div className='flex-1 flex-col lg:flex-row'>
                             <FormQuestion
                                 question="Questions for our team"
                                 optional
+                                weight='bold'
                             />
 
                             <div className="flex gap-3 flex-wrap">
@@ -311,11 +328,11 @@ function Details() {
 
 
 
-                    <div className='pr-4'>
-                        <hr className="my-7 border-gray-400" />
+                    <div className='pr-4 hidden lg:block'>
+                        <hr className="my-7 mt-12 border-gray-400" />
                     </div>
 
-                    <div className='flex flex-col lg:flex-row lg:items-center justify-between mb pr-4'>
+                    <div className='flex flex-col lg:flex-row lg:items-center justify-between mt-7 lg:mt-0 pr-4'>
                         <div className="flex flex-col gap-4">
 
                             <CheckBox id="marketing">

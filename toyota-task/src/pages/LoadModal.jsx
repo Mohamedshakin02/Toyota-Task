@@ -9,19 +9,24 @@ function LoadModal() {
 
     return (
         <>
-            <Header />
-            <Cars />
-            <Footer />
+            <div className='bg-[#F9F9F9]'>
 
-            <Modal
-                open={open}
-                onClose={() => setOpen(false)}
-                showCloseButton={false}
-                modalClassName="h-70"
-                bodyClassName="flex h-70 items-center justify-center"
-            >
-                <div className="w-14 h-14 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></div>
-            </Modal>
+                <Header />
+                <Cars />
+                <Footer />
+
+                <Modal
+                    open={open}
+                    onClose={() => setOpen(false)}
+                    showCloseButton={false}
+                    modalClassName="h-70"
+                    bodyClassName="flex h-70 items-center justify-center"
+                >
+                    <div className="w-14 h-14 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+                </Modal>
+
+            </div>
+
 
         </>
     );
