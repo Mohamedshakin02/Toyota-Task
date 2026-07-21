@@ -8,7 +8,8 @@ import FormQuestion from "./FormQuestion";
 import TabButton from "./TabButton";
 import InputBox from "./InputBox";
 import CheckBox from "./CheckBox";
-import Button from "./Button"
+import Button from "./Button";
+import CarCard from "./CarCard";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -71,21 +72,17 @@ function Details() {
             <div className='my-10 mb-5 lg:mb-15'>
                 <form action="">
                     <div className='grid grid-cols-1 lg:grid-cols-3 mb-10 gap-y-7 lg:gap-x-7'>
-                        <div className='col-span-1 flex lg:flex-col bg-gray-200 rounded-lg border border-gray-400 mr-4 lg:mr-0 pb-3'>
+                        <CarCard
+                            car={car}
+                            vehicle="Land Cruiser Hybrid 2026"
+                            layout="column"
+                            className="col-span-1 mr-4 lg:mr-0"
+                        >
+                            <Link to="" className="text-red-600 underline">
+                                Change
+                            </Link>
+                        </CarCard>
 
-                            <div className='flex lg:justify-center flex-1 pl-5 lg:pl-0'>
-                                <img
-                                    src={car}
-                                    alt="LAND CRUISER HYBRID 2026"
-                                    className="lg:w-4/6 lg:h-auto object-contain"
-                                />
-                            </div>
-
-                            <div className='p-4 flex-1 md:flex-2'>
-                                <p className='font-normal text-xl lg:text-lg text-gray-700 lg:text-black uppercase mb-1 lg:mb-0'>Land Cruiser Hyrbid 2026</p>
-                                <Link to="" className="text-red-600 underline">Change</Link>
-                            </div>
-                        </div>
 
                         <div className="col-span-2">
 
@@ -127,21 +124,19 @@ function Details() {
                     <div className='pr-4'>
                         <h1 className='mt-5 font-medium text-lg mb-5'>Title<span className='text-red-600 '>*</span></h1>
 
-                        <div className='flex gap-3'>
-
-                            <div className="flex gap-3">
-                                {titleOptions.map((option) => (
-                                    <TabButton
-                                        key={option}
-                                        label={option}
-                                        active={title === option}
-                                        onClick={() => setTitle(option)}
-                                        className="p-2 px-3"
-                                        showIcon={false}
-                                    />
-                                ))}
-                            </div>
+                        <div className="flex gap-3">
+                            {titleOptions.map((option) => (
+                                <TabButton
+                                    key={option}
+                                    label={option}
+                                    active={title === option}
+                                    onClick={() => setTitle(option)}
+                                    className="p-2 px-3"
+                                    showIcon={false}
+                                />
+                            ))}
                         </div>
+
 
 
                         <div className='flex flex-col lg:flex-row  mt-5 gap-5'>
@@ -251,7 +246,7 @@ function Details() {
                                 optional
                             />
 
-                            <div className="flex gap-3 flex-col lg:flex-row">
+                            <div className="flex gap-3 flex-wrap">
 
                                 <TabButton
                                     label="Request Arabic-speaking assistant"
@@ -259,7 +254,7 @@ function Details() {
                                     onClick={() =>
                                         setIsArabicRequested(!isArabicRequested)
                                     }
-                                    className="p-1 px-4"
+                                    className="p-2 px-4"
                                 />
 
                                 <TabButton

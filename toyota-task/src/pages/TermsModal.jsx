@@ -7,6 +7,7 @@ import Reschedule from '@/components/Reschedule'
 import LicenseIDFull from '@/components/LicenseIDFull';
 import Modal from "../components/Modal";
 import Button from "../components/Button"
+import CheckBox from "../components/CheckBox";
 
 function TermsModal() {
     const [open, setOpen] = useState(true)
@@ -26,18 +27,12 @@ function TermsModal() {
                     <div className="p-5 flex flex-col gap-5">
 
                         <div className="flex items-center">
-                            <input
+                            <CheckBox
                                 id="checkbox-1"
-                                type="checkbox"
-                                className="w-6 h-6 lg:w-4 lg:h-4 accent-green-600"
-                            />
-
-                            <label
-                                htmlFor="checkbox-1"
-                                className="select-none ms-2 text-sm text-black"
+                                inputClassName="w-6 h-6 lg:w-4 lg:h-4"
                             >
                                 I have read and understand the liability and insurance terms above.
-                            </label>
+                            </CheckBox>
                         </div>
 
 

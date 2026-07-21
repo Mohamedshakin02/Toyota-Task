@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PageHeader from "./PageHeader";
 import uae from "../assets/uae flag.png";
 import Button from "./Button"
+import CarCard_2 from "./CarCard_2"
 
 function Thanks() {
     return (
@@ -19,41 +20,20 @@ function Thanks() {
             <div className='my-10 mb-5 lg:mb-15'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 mb-10 gap-y-7 lg:gap-x-7'>
 
-                    <div className='col-span-2 lg:col-span-1 order-1 flex flex-col rounded-lg border-dashed border-2 border-gray-400'>
-
-                        <div className="flex justify-center 2xl:-mt-3">
-                            <img
-                                src={car}
-                                alt="LAND CRUISER HYBRID 2026"
-                                className="w-4/6 h-auto lg:h-fit"
-                            />
-                        </div>
-
-                        <div className='p-4'>
-                            <p className='font-bold text-2xl lg:text-xl text-black mb-3'>Tuesday, 12 March 2026 - 08:30 AM</p>
-
-                            <div className='mb-3'>
-                                <p className='text-sm text-gray-600'>Vehicle</p>
-                                <p>Land Cruiser 2026</p>
-                            </div>
-
-                            <div className='flex flex-col lg:flex-row justify-between lg:items-end gap-y-3 lg:gap-y-0'>
-                                <div>
-                                    <p className='text-sm text-gray-600'>Showroom</p>
-                                    <p>Toyota Abu Dhabi Airport Road</p>
-                                </div>
-
-                                <div>
-                                    <Link to="" className="text-red-600 underline"><i className="bi bi-send-fill mr-3 text-sm"></i>Get Directions</Link>
-                                </div>
-
-
-                            </div>
-
-
-
-                        </div>
-                    </div>
+                    <CarCard_2
+                        car={car}
+                        date="Tuesday, 12 March 2026 - 08:30 AM"
+                        vehicle="Land Cruiser 2026"
+                        showroom="Toyota Abu Dhabi Airport Road"
+                        className="col-span-2 lg:col-span-1 order-1"
+                        imageContainerClassName="2xl:-mt-3"
+                        imageClassName="lg:h-fit"
+                    >
+                        <Link to="" className="text-red-600 underline">
+                            <i className="bi bi-send-fill mr-3 text-sm"></i>
+                            Get Directions
+                        </Link>
+                    </CarCard_2>
 
                     <div className="col-span-2 lg:col-span-1 order-3 lg:order-2 flex flex-col gap-y-7">
                         <div className='rounded-lg border-2 border-gray-300 p-4'>

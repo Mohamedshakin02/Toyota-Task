@@ -1,82 +1,69 @@
 import React from "react";
 
-
 function CarCard({
-    image,
-    title,
-    variant = "horizontal",
-    edit = false,
-    children
+    car,
+    vehicle,
+    layout = "row",
+    imageClassName = "",
+    imageContainerClassName = "",
+    textContainerClassName = "",
+    className = "",
+    children,
 }) {
-
+    const isColumn = layout === "column";
 
     return (
-
         <div
             className={`
-relative 
-        rounded-lg
-        mr-4 
-        lg:mr-0
-        pb-3
-${variant === "summary"
-                    ?
-                    "border-2 border-dashed border-gray-400"
-                    :
-                    "bg-gray-200 border border-gray-400"
-                }
-`}
+                flex
+                ${isColumn ? "lg:flex-col" : ""}
+                bg-gray-200
+                rounded-lg
+                border
+                border-gray-400
+                pb-3
+                ${className}
+            `}
         >
-
-
-            {
-                edit &&
-                <i className="bi bi-pencil absolute top-4 right-4 text-xl text-red-600"></i>
-            }
-
-
             <div
-                className={
-                    variant === "horizontal"
-                        ?
-                        "flex lg:flex-col"
-                        :
-                        "flex flex-col"
-                }
+                className={`
+                    flex
+                    flex-1
+                    pl-5
+                    lg:pl-0
+                    lg:justify-center
+                    ${imageContainerClassName}
+                `}
             >
-
-
-                <div className="flex justify-center flex-1">
-
-                    <img
-                        src={image}
-                        className="w-4/6 object-contain"
-                    />
-
-                </div>
-
-
-
-                <div className="p-4 flex-1">
-
-                    <p className="font-bold text-xl">
-                        {title}
-                    </p>
-
-
-                    {children}
-
-
-                </div>
-
-
+                <img
+                    src={car}
+                    alt={vehicle}
+                    className={`
+                        lg:w-4/6
+                        lg:h-auto
+                        object-contain
+                        ${imageClassName}
+                    `}
+                />
             </div>
 
+            <div
+                className={`
+                    flex-1
+                    md:flex-2
+                    p-4
+                    ${!isColumn ? "flex flex-col justify-center" : ""}
+                    ${textContainerClassName}
+                `}
+            >
+                <p className="font-normal text-xl lg:text-lg text-gray-700 lg:text-black uppercase mb-1 lg:mb-0">
+                    {vehicle}
+                </p>
 
+                {children}
+            </div>
         </div>
-
-    )
-
+    );
 }
 
 export default CarCard;

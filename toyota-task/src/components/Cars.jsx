@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import PageHeader from "./PageHeader";
 import CategoryTabs from "./CategoryTabs";
@@ -20,11 +21,13 @@ import car14 from "../assets/cars/car 14.png";
 
 function Cars() {
 
+    const [selectedCategory, setSelectedCategory] = useState("SUV");
+
     const categories = [
-        { name: "Hybrid" },
-        { name: "Sedan" },
-        { name: "SUV", active: true },
-        { name: "GR" },
+        "Hybrid",
+        "Sedan",
+        "SUV",
+        "GR",
     ];
 
     const cars = [
@@ -49,7 +52,12 @@ function Cars() {
             <PageHeader title="Select car model" />
 
             <div className="mt-5">
-                <CategoryTabs categories={categories} />
+                <CategoryTabs
+                    options={categories}
+                    selected={selectedCategory}
+                    setSelected={setSelectedCategory}
+                    className="text-lg lg:text-base"
+                />
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 py-10">

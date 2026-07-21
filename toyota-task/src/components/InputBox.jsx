@@ -5,7 +5,9 @@ function InputBox({
     value = "",
     type = "text",
     placeholder = "",
+    disabled = false,
     className = ""
+    
 }) {
     return (
         <div
@@ -13,6 +15,7 @@ function InputBox({
                 border-2 border-gray-400
                 rounded-lg
                 p-1 px-2
+                ${disabled ? "bg-gray-200 text-gray-500" : "bg-white"}
                 ${className}
             `}
         >
@@ -24,10 +27,11 @@ function InputBox({
                 type={type}
                 defaultValue={value}
                 placeholder={placeholder}
+                disabled={disabled}
                 className="
                     w-full
                     outline-none
-                    focus:outline-none
+                    focus:outline-none      
                 "
             />
         </div>

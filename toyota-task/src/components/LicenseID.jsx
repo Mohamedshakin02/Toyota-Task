@@ -1,7 +1,8 @@
 import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
-import Button from "./Button"
+import Button from "./Button";
+import CarCard_2 from "./CarCard_2";
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -18,7 +19,7 @@ function LicenseID() {
             </div>
 
             <div className='mb-5 lg:mb-12'>
-                <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-5 items-stretch">
+                <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-10 items-stretch">
 
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
@@ -89,42 +90,25 @@ function LicenseID() {
                 />
             </div>
 
-            <div className='mt-12 mb-15 flex flex-col lg:flex-row rounded-lg border-dashed border-2 border-gray-400'>
+            <CarCard_2
+                layout="row"
+                car={car}
+                date="Tuesday, 12 March 2026 - 08:30 AM"
+                vehicle="Land Cruiser 2026"
+                showroom="Toyota Abu Dhabi Airport Road"
+                className="mt-12 mb-15"
+                imageContainerClassName="2xl:-mt-3 lg:pb-5"
+                imageClassName="lg:h-fit"
+                dateClassName="font-bold text-2xl lg:text-4xl text-black mb-6"
+                valueClassName="text-lg"
+                contentPadding="p-6"
+            >
+                <Link to="" className="text-red-600 underline">
+                    <i className="bi bi-send-fill mr-3"></i>Get Directions
+                </Link>
+            </CarCard_2>
 
 
-                <div className="flex justify-center 2xl:-mt-3 lg:pb-5">
-                    <img
-                        src={car}
-                        alt="LAND CRUISER HYBRID 2026"
-                        className="object-contain w-4/6 h-auto lg:h-fit"
-                    />
-                </div>
-
-                <div className='p-6'>
-                    <p className='font-bold text-2xl lg:text-4xl text-black mb-6'>Tuesday, 12 March 2026 - 08:30 AM</p>
-
-                    <div className='mb-3'>
-                        <p className='text-gray-600'>Vehicle</p>
-                        <p className='text-lg'>Land Cruiser 2026</p>
-                    </div>
-
-                    <div className='flex flex-col lg:flex-row justify-between lg:items-end gap-y-3 lg:gap-y-0'>
-                        <div>
-                            <p className='text text-gray-600'>Showroom</p>
-                            <p className='text-lg'>Toyota Abu Dhabi Airport Road</p>
-                        </div>
-
-                        <div>
-                            <Link to="" className="text-red-600 underline"><i className="bi bi-send-fill mr-3"></i>Get Directions</Link>
-                        </div>
-
-
-                    </div>
-
-
-
-                </div>
-            </div>
         </section>
     )
 }

@@ -4,7 +4,8 @@ function CheckBox({
     id,
     checked = false,
     onChange,
-    children
+    children,
+    inputClassName = ""
 }) {
     return (
         <div className="flex items-center">
@@ -12,7 +13,8 @@ function CheckBox({
                 id={id}
                 type="checkbox"
                 defaultChecked={checked}
-                className="w-4 h-4 accent-green-600"
+                onChange={onChange}
+                className={`w-4 h-4 accent-green-600 ${inputClassName}`}
             />
 
             <label

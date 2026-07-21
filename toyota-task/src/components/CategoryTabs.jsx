@@ -1,28 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function CategoryTabs({ categories }) {
+function CategoryTabs({
+    options,
+    selected,
+    setSelected,
+    className = ""
+}) {
     return (
-        <ul className="flex items-center gap-5 text-xl lg:text-base font-medium">
-            {categories.map((category) => (
+        <ul className={`flex items-center gap-5 font-medium ${className}`}>
+            {options.map((option) => (
                 <li
-                    key={category.name}
-                    className={`justify-center border-b-[3px] ${
-                        category.active
+                    key={option}
+                    className={`border-b-[3px] ${
+                        selected === option
                             ? "border-red-600 px-2"
                             : "border-transparent"
                     }`}
                 >
-                    <Link
-                        to=""
-                        className={`flex items-center ${
-                            category.active
+                    <button
+                        type="button"
+                        onClick={() => setSelected(option)}
+                        className={`cursor-pointer ${
+                            selected === option
                                 ? "text-red-600"
                                 : "text-gray-400"
                         }`}
                     >
-                        {category.name}
-                    </Link>
+                        {option}
+                    </button>
                 </li>
             ))}
         </ul>
