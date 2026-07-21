@@ -5,6 +5,7 @@ import Button from "./Button";
 import CarCard_2 from "./CarCard_2";
 import LicenseCard from "./LicenceCard";
 import LicenseContainer from "./LicenseContainer";
+import WaiverCard from "./WaiverCard";
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -60,21 +61,11 @@ function LicenseIDFull() {
                             <h1 className='font-medium text-xl lg:text-lg mb-5'>Sign the waiver<span className='text-red-600'>*</span></h1>
                         </div>
 
-                        <div className='flex-1 grid grid-cols-7 border-2 border-red-500 rounded-lg'>
-                            <div className='col-span-3 flex box-border flex-col items-center justify-center rounded-lg text-gray-600 gap-y-4'>
-                                <div className='h-full p-4'>
-                                    <img src={document} alt="Waiver Document" className="w-full h-full object-cover" />
-                                </div>
-                            </div>
-                            <div className='col-span-4 flex flex-col items-center justify-center rounded-lg text-gray-600 w-full gap-y-5'>
-                                <div> <i className="bi bi-pencil text-2xl lg:text-3xl"></i> </div>
-                                <div className='lg:text-xl text-center'> <p>Click to review & accept</p> </div>
-                            </div>
-                        </div>
+                        <WaiverCard
+                            state="required"
+                            image={document}
+                        />
 
-                        <div className='mt-3 text-sm text-red-500'>
-                            <p>To proceed with your best test drive, acceptance of the waiver is required</p>
-                        </div>
                     </div>
 
                 </div>

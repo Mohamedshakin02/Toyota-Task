@@ -5,6 +5,7 @@ import Button from "./Button";
 import CarCard_2 from "./CarCard_2";
 import LicenseCard from "./LicenceCard";
 import LicenseContainer from "./LicenseContainer";
+import WaiverCard from "./WaiverCard";
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -20,7 +21,7 @@ function LicenseID() {
                 <p className='text-lg'>Please upload clear photos of both the front and back of your valid driver's license.</p>
             </div>
 
-            <div className='mb-5 lg:mb-12'>
+            <div className='mb-12'>
                 <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-10 items-stretch">
 
 
@@ -42,10 +43,11 @@ function LicenseID() {
                             <LicenseCard
                                 state="empty"
                                 label="Upload back"
+                                disableAspectSquare
                             />
                         </LicenseContainer>
 
-                        
+
                     </div>
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
@@ -53,22 +55,10 @@ function LicenseID() {
                             <h1 className='font-medium text-xl lg:text-lg mb-5'>Sign the waiver<span className='text-red-600'>*</span></h1>
                         </div>
 
-                        <div className='flex-1 grid grid-cols-7 border-2 border-gray-400 rounded-lg'>
-                            <div className='col-span-3 flex box-border flex-col items-center justify-center rounded-lg text-gray-600 gap-y-4'>
-                                <div className='h-full p-4'>
-                                    <img src={document} alt="Waiver Document" className="w-full h-full object-cover" />
-                                </div>
-
-                            </div>
-                            <div className='col-span-4 flex flex-col items-center justify-center rounded-lg text-gray-600 w-full gap-y-5'>
-                                <div> <i className="bi bi-pencil text-2xl lg:text-3xl"></i> </div>
-                                <div className='lg:text-xl text-center'> <p>Click to review & accept</p> </div>
-                            </div>
-                        </div>
-
-                        <div className='mt-3 text-sm text-gray-600 invisible'>
-                            <p>Supported formats PDF, .JPEG, and .PNG, up to 5MB</p>
-                        </div>
+                        <WaiverCard
+                            state="pending"
+                            image={document}
+                        />
 
                     </div>
 

@@ -1,7 +1,5 @@
-import React from "react";
-
 function LicenseCard({
-    state = "empty", // empty | uploading | verified
+    state = "empty",
     label = "Upload front",
     image,
     fileName,
@@ -9,10 +7,10 @@ function LicenseCard({
     borderColor = "",
     showRemove = false,
     showCheck = false,
+    disableAspectSquare = false,   
     className = "",
 }) {
     const isEmpty = state === "empty";
-    const isUploading = state === "uploading";
     const isVerified = state === "verified";
 
     return (
@@ -23,9 +21,18 @@ function LicenseCard({
                 p-4
                 rounded-lg
                 gap-y-2
-                ${isEmpty
-                    ? "items-center justify-center border-2 border-dashed border-gray-400 text-gray-600"
-                    : `justify-center border-2 ${borderColor}`
+                ${
+                    isEmpty
+                        ? `
+                            items-center
+                            justify-center
+                            border-2
+                            border-dashed
+                            border-gray-400
+                            text-gray-600
+                            ${disableAspectSquare ? "" : "aspect-square lg:aspect-auto"}
+                          `
+                        : `justify-center border-2 ${borderColor}`
                 }
                 ${className}
             `}
@@ -33,21 +40,18 @@ function LicenseCard({
             {isEmpty ? (
                 <>
                     <i className="bi bi-plus-lg text-2xl"></i>
-
                     <p>{label}</p>
                 </>
             ) : (
                 <>
                     <div>
-                        <img
-                            src={image}
-                            alt={fileName}
-                        />
+                        <img src={image} alt={fileName} />
                     </div>
 
                     <div
-                        className={`h-2 w-full bg-gray-300 ${isVerified ? "opacity-0" : ""
-                            }`}
+                        className={`h-2 w-full bg-gray-300 ${
+                            isVerified ? "opacity-0" : ""
+                        }`}
                     >
                         <div
                             className="h-full bg-black"
