@@ -2,6 +2,7 @@ import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
 import CarCard_2 from "./CarCard_2";
+import DetailsHeading2 from "./DetailsHeading2";
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -11,13 +12,12 @@ import EmiratesBack from "../assets/Emirates-back.png";
 function Confirm() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex flex-col items-center text-center gap-3">
-                <p className=''>Testdrive number #TO1234</p>
-                <h1 className="text-3xl font-bold">
-                    Thank you!
-                </h1>
-                <p className=''>We've received your documents</p>
-            </div>
+
+            <DetailsHeading2
+                reference="Testdrive number #TO1234"
+                title="Thank you!"
+                description="We've received your documents"
+            />
 
             <div className='mt-10 w-full p-4 px-6 bg-gray-100  flex items-start gap-4 rounded-sm'>
                 <div className='mt-1'><i className="bi bi-check-circle-fill text-2xl text-green-500"></i></div>
@@ -45,7 +45,7 @@ function Confirm() {
                     <i className="bi bi-send-fill mr-3"></i>Get Directions
                 </Link>
             </CarCard_2>
-            
+
         </section>
     )
 }

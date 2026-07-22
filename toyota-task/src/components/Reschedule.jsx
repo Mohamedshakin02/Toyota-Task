@@ -2,6 +2,8 @@ import React from 'react'
 import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
 import CarCard_2 from "./CarCard_2";
+import DetailsHeading from "./DetailsHeading";
+import UploadContainer from "./UploadContainer"
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -13,12 +15,13 @@ import Button from "./Button"
 function Reschedule() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex flex-col text-center lg:text-left gap-3">
-                <h1 className="text-3xl lg:text-4xl">
-                    Hi Ahmed,
-                </h1>
-                <p className='text-lg'>Here are the details of your test drive booking. What would you like to do next?</p>
-            </div>
+
+            <DetailsHeading
+                title="Hi Ahmed,"
+                description="Here are the details of your test drive booking. What would you like to do next?"
+            />
+
+
 
             <div className="mt-9 col-span-2 flex justify-center gap-5">
 
@@ -59,23 +62,16 @@ function Reschedule() {
             </CarCard_2>
 
 
-            <div className="mt-7 lg:mt-12 mb-15 col-span-2 order-2 lg:order-3 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-x-10 p-4 border-2 border-gray-300 rounded-lg">
-                <div className='flex flex-col gap-y-3'>
-                    <h1 className='font-bold text-2xl lg:text-xl text-black'>Upload your driver license</h1>
-                    <p className='text-lg'>Upload now for a faster check-in, or use the link we've sent via [WhatsApp/Email] to provide it later at your convenience.</p>
-                </div>
-                <div>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        width="auto"
-                        className="mt-5 lg:mt-0 w-auto! px-7 whitespace-nowrap"
-                    >
-                        <span className="lg:hidden">Upload now</span>
-                        <span className="hidden lg:inline">Manage my documents</span>
-                    </Button>
-                </div>
-            </div>
+            <UploadContainer
+                className="mt-7 lg:mt-12 mb-15 col-span-2 order-2 lg:order-3"
+                title="Upload your driver license"
+                description="Upload now for a faster check-in, or use the link we've sent via WhatsApp/Email to provide it later at your convenience."
+                mobileButtonLabel="Upload now"
+                desktopButtonLabel="Manage my documents"
+                buttonSize="md"
+                buttonWidth="auto"
+                buttonClassName="w-auto! px-7"
+            />
 
         </section>
     )

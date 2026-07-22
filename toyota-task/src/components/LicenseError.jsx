@@ -12,29 +12,25 @@ import car from "../assets/cars/car 15.png";
 import EmiratesFront2 from "../assets/Emirates-front2.png";
 import EmiratesBack from "../assets/Emirates-back.png";
 import FormQuestion from "./FormQuestion";
+import AlertBox from "./AlertBox";
+import DetailsHeading from "./DetailsHeading";
 
 function LicenseError() {
     return (
 
         <>
-            <div className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-                <div className='w-full p-4 bg-red-100 border-2 border-red-500 flex items-center gap-4 rounded-sm'>
-                    <div><i className="bi bi-exclamation-circle text-red-500 text-xl"></i></div>
-                    <div className='text-red-500 flex flex-col gap-0.5'>
-                        <h1 className='font-semibold'>Something went wrong</h1>
-                        <p>We're having trouble connecting. Your details are saved locally; we will retry automatically.</p>
-                    </div>
-                </div>
 
-            </div>
+            <AlertBox
+                title="Something went wrong"
+                message="We're having trouble connecting. Your details are saved locally; we will retry automatically."
+            />
 
-            <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-                <div className="flex flex-col text-center lg:text-left gap-3">
-                    <h1 className="text-3xl lg:text-4xl">
-                        Hi Ahmed,
-                    </h1>
-                    <p className='text-lg'>Please upload clear photos of both the front and back of your valid driver's license.</p>
-                </div>
+
+            <section className='container px-4 lg:px-36 mx-auto mt-12 mb-12'>
+                <DetailsHeading
+                    title="Hi Ahmed,"
+                    description="Please upload clear photos of both the front and back of your valid driver's license."
+                />
 
                 <div className='mb-10'>
                     <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-10 items-stretch">

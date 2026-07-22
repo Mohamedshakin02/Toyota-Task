@@ -3,6 +3,8 @@ import document from "../assets/document.png";
 import { Link } from 'react-router-dom';
 import Button from "./Button";
 import CarCard_2 from "./CarCard_2";
+import DetailsHeading2 from "./DetailsHeading2";
+import UploadContainer from "./UploadContainer"
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -12,13 +14,12 @@ import EmiratesBack from "../assets/Emirates-back.png";
 function RescheduleConfirm() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex flex-col items-center text-center gap-3">
-                <p className=''>Testdrive number #TO1234</p>
-                <h1 className="text-3xl font-bold">
-                    Your test drive has been rescheduled
-                </h1>
-                <p className=''>We've updated your appointment details</p>
-            </div>
+
+            <DetailsHeading2
+                reference="Testdrive number #TO1234"
+                title="Your test drive has been rescheduled"
+                description="We've updated your appointment details"
+            />
 
             <div className='mt-10 w-full p-4 px-6 bg-gray-100  flex items-start gap-4 rounded-sm'>
                 <div className='mt-1'><i className="bi bi-check-circle-fill text-2xl text-green-500"></i></div>
@@ -48,23 +49,16 @@ function RescheduleConfirm() {
             </CarCard_2>
 
 
-            <div className="mt-12 mb-15 col-span-2 order-2 lg:order-3 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-x-10 p-4 border-2 border-gray-300 rounded-lg">
-                <div className='flex flex-col gap-y-3'>
-                    <h1 className='font-bold text-2xl lg:text-xl text-black'>Upload your driver license</h1>
-                    <p className='text-lg'>Upload now for a faster check-in, or use the link we've sent via [WhatsApp/Email] to provide it later at your convenience.</p>
-                </div>
-                <div>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        width="auto"
-                        className="mt-5 lg:mt-0 w-auto! px-7 whitespace-nowrap"
-                    >
-                        <span className="lg:hidden">Upload now</span>
-                        <span className="hidden lg:inline">Manage my documents</span>
-                    </Button>
-                </div>
-            </div>
+            <UploadContainer
+                className="mt-12 mb-15 col-span-2 order-2 lg:order-3"
+                title="Upload your driver license"
+                description="Upload now for a faster check-in, or use the link we've sent via WhatsApp/Email to provide it later at your convenience."
+                mobileButtonLabel="Upload now"
+                desktopButtonLabel="Manage my documents"
+                buttonSize="md"
+                buttonWidth="auto"
+                buttonClassName="w-auto! px-7"
+            />
 
         </section>
     )

@@ -7,6 +7,7 @@ import LicenseCard from "./LicenceCard";
 import LicenseContainer from "./LicenseContainer";
 import WaiverCard from "./WaiverCard";
 import FormQuestion from "./FormQuestion";
+import DetailsHeading from "./DetailsHeading";
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -15,12 +16,10 @@ import EmiratesFront from "../assets/Emirates-front.png";
 function LicenseID() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex flex-col text-center lg:text-left gap-3">
-                <h1 className="text-3xl lg:text-4xl">
-                    Hi Ahmed,
-                </h1>
-                <p className='text-lg'>Please upload clear photos of both the front and back of your valid driver's license.</p>
-            </div>
+            <DetailsHeading
+                title="Hi Ahmed,"
+                description="Please upload clear photos of both the front and back of your valid driver's license."
+            />
 
             <div className='mb-12'>
                 <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-10 items-stretch">
@@ -57,7 +56,7 @@ function LicenseID() {
                     </div>
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
-                        
+
                         <FormQuestion
                             question="Sign the waiver"
                             size='lg'

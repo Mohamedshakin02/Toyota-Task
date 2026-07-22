@@ -9,18 +9,17 @@ import LicenseCard from "./LicenceCard";
 import LicenseContainer from "./LicenseContainer";
 import WaiverCard from "./WaiverCard";
 import FormQuestion from "./FormQuestion";
+import DetailsHeading from "./DetailsHeading";
 
 import Button from "./Button"
 
 function License() {
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
-            <div className="flex flex-col text-center lg:text-left gap-3">
-                <h1 className="text-3xl lg:text-4xl">
-                    Hi Ahmed,
-                </h1>
-                <p className='text-lg'>Please upload clear photos of both the front and back of your valid driver's license.</p>
-            </div>
+            <DetailsHeading
+                title="Hi Ahmed,"
+                description="Please upload clear photos of both the front and back of your valid driver's license."
+            />
 
             <div className='mb-12'>
                 <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-y-7 lg:gap-x-10 items-stretch">
