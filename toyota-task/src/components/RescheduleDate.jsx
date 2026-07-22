@@ -7,6 +7,7 @@ import Button from "./Button"
 import CategoryTabs from "../components/CategoryTabs";
 import TabButton from "./TabButton";
 import LocationCard from "../components/LocationCard";
+import FormQuestion from "./FormQuestion";
 
 import location1 from "../assets/locations/Location 1.png";
 import location2 from "../assets/locations/Location 2.png";
@@ -122,7 +123,13 @@ function RescheduleDate() {
 
 
                     <div className='pr-0'>
-                        <h1 className='mt-5 font-medium text-lg mb-5'>Choose Location</h1>
+
+                        <FormQuestion
+                            question="Choose Location"
+                            size='lg'
+                            weight='bold'
+                            className='mb-3! lg:mb-5'
+                        />
 
                         <SliderTabs
                             options={locationTabs}
@@ -135,7 +142,13 @@ function RescheduleDate() {
                     <div className='pr-4'>
 
                         <div className='mt-8 gap-5'>
-                            <h1 className='mt-5 font-medium text-lg mb-5'>Choose Show Room</h1>
+
+                            <FormQuestion
+                                question="Choose Show Room"
+                                size='lg'
+                                weight='bold'
+                                className='mb-3! lg:mb-5'
+                            />
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                                 {showroomLocations.map((location) => (
@@ -158,7 +171,13 @@ function RescheduleDate() {
                 <div className='pr-4'>
 
                     <div className='mt-8 gap-5'>
-                        <h1 className=' font-medium text-lg mb-5'>Select Date</h1>
+
+                        <FormQuestion
+                            question="Select Date"
+                            size='lg'
+                            weight='bold'
+                            className='mb-3! lg:mb-5'
+                        />
 
                         <div>
                             <Calendar
@@ -177,7 +196,13 @@ function RescheduleDate() {
                 <div className='pr-4'>
 
                     <div className='mt-8 gap-5'>
-                        <h1 className=' font-medium text-lg mb-5'>Preferred Time</h1>
+
+                        <FormQuestion
+                            question="Preferred Time"
+                            size='lg'
+                            weight='bold'
+                            className='mb-3! lg:mb-5'
+                        />
 
                         <div className="mt-5">
                             <CategoryTabs
@@ -185,6 +210,7 @@ function RescheduleDate() {
                                 selected={selectedCategory}
                                 setSelected={setSelectedCategory}
                                 className="text-lg lg:text-base"
+                                roundedUnderline
                             />
                         </div>
 

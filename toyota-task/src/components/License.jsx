@@ -8,7 +8,7 @@ import CarCard_2 from "./CarCard_2";
 import LicenseCard from "./LicenceCard";
 import LicenseContainer from "./LicenseContainer";
 import WaiverCard from "./WaiverCard";
-
+import FormQuestion from "./FormQuestion";
 
 import Button from "./Button"
 
@@ -27,9 +27,16 @@ function License() {
 
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
-                        <div>
-                            <h1 className='font-medium text-xl lg:text-lg mb-5'>Upload your driver's license<span className='text-red-600'>*</span></h1>
-                        </div>
+
+
+                        <FormQuestion
+                            question="Upload your driver's license"
+                            size='lg'
+                            weight='medium'
+                            className='mb-3!'
+                            required
+                        />
+
 
                         <LicenseContainer status="upload">
                             <LicenseCard
@@ -46,9 +53,14 @@ function License() {
                     </div>
 
                     <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
-                        <div>
-                            <h1 className='font-medium text-xl lg:text-lg mb-5'>Sign the waiver<span className='text-red-600'>*</span></h1>
-                        </div>
+
+                        <FormQuestion
+                            question="Sign the waiver"
+                            size='lg'
+                            weight='medium'
+                            className='mb-3!'
+                            required
+                        />
 
                         <WaiverCard
                             state="pending"

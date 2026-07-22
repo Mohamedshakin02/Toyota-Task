@@ -55,7 +55,7 @@ function Button({
             {children || label}
 
             {showArrow && (
-                <i className="bi bi-arrow-right-short ml-1 hidden lg:inline-block"></i>
+                <i className="bi bi-arrow-right-short ml-2 hidden lg:inline-block text-2xl"></i>
             )}
         </button>
     );

@@ -4,18 +4,24 @@ function CategoryTabs({
     options,
     selected,
     setSelected,
-    className = ""
+    roundedUnderline = false,
+    className = "",
 }) {
     return (
         <ul className={`flex items-center gap-5 font-medium ${className}`}>
             {options.map((option) => (
                 <li
                     key={option}
-                    className={`border-b-[3px] ${
-                        selected === option
-                            ? "border-red-600 px-2"
-                            : "border-transparent"
-                    }`}
+                    className={`
+                        relative px-2
+                        ${
+                            selected === option
+                                ? roundedUnderline
+                                    ? "border-b-[3px] border-red-600 lg:border-b-0"
+                                    : "border-b-[3px] border-red-600"
+                                : "border-transparent"
+                        }
+                    `}
                 >
                     <button
                         type="button"
@@ -28,6 +34,10 @@ function CategoryTabs({
                     >
                         {option}
                     </button>
+
+                    {selected === option && roundedUnderline && (
+                        <span className="hidden lg:block absolute left-0 right-0 -bottom-[10px] h-[4px] bg-red-600 rounded-t-full" />
+                    )}
                 </li>
             ))}
         </ul>

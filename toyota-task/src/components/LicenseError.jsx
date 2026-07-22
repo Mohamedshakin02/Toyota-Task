@@ -11,6 +11,7 @@ import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
 import EmiratesFront2 from "../assets/Emirates-front2.png";
 import EmiratesBack from "../assets/Emirates-back.png";
+import FormQuestion from "./FormQuestion";
 
 function LicenseError() {
     return (
@@ -40,9 +41,14 @@ function LicenseError() {
 
 
                         <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
-                            <div>
-                                <h1 className='font-medium text-xl lg:text-lg mb-5'>Upload your driver's license<span className='text-red-600'>*</span></h1>
-                            </div>
+
+                            <FormQuestion
+                                question="Upload your driver's license"
+                                size='lg'
+                                weight='medium'
+                                className='mb-3!'
+                                required
+                            />
 
 
                             <LicenseContainer status="verified" preserveHeight>
@@ -67,9 +73,14 @@ function LicenseError() {
                         </div>
 
                         <div className='col-span-2 lg:col-span-1 order-1 flex flex-col'>
-                            <div>
-                                <h1 className='font-medium text-xl lg:text-lg mb-5'>Sign the waiver<span className='text-red-600'>*</span></h1>
-                            </div>
+
+                            <FormQuestion
+                                question="Sign the waiver"
+                                size='lg'
+                                weight='medium'
+                                className='mb-3!'
+                                required
+                            />
 
                             <WaiverCard
                                 state="accepted"

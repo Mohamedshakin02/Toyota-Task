@@ -29,7 +29,7 @@ function LicenseContainer({
             <div className={`mt-3 text-sm ${messages[status].color}`}>
                 <p>{messages[status].text}</p>
 
-                {preserveHeight && <br className="xl:hidden" />}
+                {preserveHeight && <br className="hidden lg:block xl:hidden" />}
             </div>
         </>
     );

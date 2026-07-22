@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import SectionHeader from "./SectionHeader";
 import SliderTabs from "../components/SliderTabs";
 import LocationCard from "../components/LocationCard";
+import FormQuestion from "./FormQuestion";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -67,7 +69,14 @@ function Location() {
 
 
                 <div className='pr-0'>
-                    <h1 className='mt-5 font-medium text-lg mb-5'>Choose Location</h1>
+
+                    <FormQuestion
+                        question="Choose Location"
+                        size='lg'
+                        weight='bold'
+                        className='mb-3! lg:mb-5'
+                    />
+
 
                     <SliderTabs
                         options={locationTabs}
@@ -80,7 +89,13 @@ function Location() {
                 <div className='pr-4'>
 
                     <div className='mt-8 gap-5'>
-                        <h1 className='mt-5 font-medium text-lg mb-5'>Choose Show Room</h1>
+                        
+                        <FormQuestion
+                            question="Choose Show Room"
+                            size='lg'
+                            weight='bold'
+                            className='mb-3! lg:mb-5'
+                        />
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                             {showroomLocations.map((location) => (
