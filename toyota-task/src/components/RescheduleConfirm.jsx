@@ -5,6 +5,7 @@ import Button from "./Button";
 import CarCard_2 from "./CarCard_2";
 import DetailsHeading2 from "./DetailsHeading2";
 import UploadContainer from "./UploadContainer"
+import ConfirmBox from "./ConfirmBox"
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -21,13 +22,11 @@ function RescheduleConfirm() {
                 description="We've updated your appointment details"
             />
 
-            <div className='mt-10 w-full p-4 px-6 bg-gray-100  flex items-start gap-4 rounded-sm'>
-                <div className='mt-1'><i className="bi bi-check-circle-fill text-2xl text-green-500"></i></div>
-                <div className='flex flex-col gap-0.5 lg:gap-2'>
-                    <h1 className='font-bold text-xl'>Confirmation sent via [WhatsApp/Email]</h1>
-                    <p className='text-gray-500'>You'll receive a reminder 24 hours before your appointment.</p>
-                </div>
-            </div>
+            <ConfirmBox
+                className="mt-10"
+                title="Confirmation sent via WhatsApp/Email"
+                description="You'll receive a reminder 24 hours before your appointment."
+            />
 
 
             <CarCard_2
