@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import uae from "../assets/uae flag.png";
 import Reschedule from '@/components/Reschedule'
 import LicenseIDFull from '@/components/LicenseIDFull';
@@ -11,6 +12,7 @@ import CheckBox from "../components/CheckBox";
 
 function TermsModal() {
     const [open, setOpen] = useState(true)
+    const navigate = useNavigate();
 
     return (
         <>
@@ -44,6 +46,7 @@ function TermsModal() {
                                 width="full"
                                 size="sm"
                                 className="w-auto! lg:w-full! lg:px-0 lg:py-3"
+                                onClick={() => navigate(-1)}
                             />
 
                             <Button
@@ -52,6 +55,7 @@ function TermsModal() {
                                 width="full"
                                 size="sm"
                                 className="w-auto! lg:w-full! lg:px-0 lg:py-3"
+                                onClick={() => navigate("/agreement")}
                             />
 
                         </div>

@@ -11,8 +11,12 @@ import EmiratesBack from "../assets/Emirates-back.png";
 import Button from "./Button"
 import AlertBox from "./AlertBox";
 import DetailsHeading from "./DetailsHeading";
+import { useNavigate } from "react-router-dom";
 
 function CancelConfirm() {
+
+    const navigate = useNavigate();
+
     return (
 
         <>
@@ -50,6 +54,7 @@ function CancelConfirm() {
                         width="quarter"
                         size="wide"
                         className="text-lg"
+                        onClick={() => navigate("/")}
                     />
 
                     <Button
@@ -58,6 +63,7 @@ function CancelConfirm() {
                         width="quarter"
                         size="wide"
                         className="text-lg"
+                        onClick={() => navigate("/")}
                     />
                 </div>
 

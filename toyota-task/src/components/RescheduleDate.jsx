@@ -14,6 +14,7 @@ import location2 from "../assets/locations/Location 2.png";
 import location3 from "../assets/locations/Location 3.png";
 import location4 from "../assets/locations/Location 4.png";
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -30,6 +31,8 @@ import { useState } from "react";
 import { Calendar } from "@/components/ui/calendar-rac";
 
 function RescheduleDate() {
+
+    const navigate = useNavigate();
 
     const [date, setDate] = useState(
         today(getLocalTimeZone())
@@ -233,6 +236,7 @@ function RescheduleDate() {
                                 width="auto"
                                 size="md"
                                 showArrow
+                                onClick={() => navigate("/rescheduleconfirm")}
                             />
                         </div>
 

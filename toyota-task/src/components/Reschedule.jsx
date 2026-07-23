@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CarCard_2 from "./CarCard_2";
 import DetailsHeading from "./DetailsHeading";
 import UploadContainer from "./UploadContainer"
+import { useNavigate } from "react-router-dom";
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -13,6 +14,9 @@ import EmiratesBack from "../assets/Emirates-back.png";
 import Button from "./Button"
 
 function Reschedule() {
+
+    const navigate = useNavigate();
+
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
 
@@ -31,6 +35,7 @@ function Reschedule() {
                     width="quarter"
                     size="wide"
                     className="text-lg"
+                    onClick={() => navigate("/cancelmodal")}
                 />
 
                 <Button
@@ -39,6 +44,7 @@ function Reschedule() {
                     width="quarter"
                     size="wide"
                     className="text-lg"
+                    onClick={() => navigate("/rescheduledate")}
                 />
 
             </div>
@@ -71,6 +77,7 @@ function Reschedule() {
                 buttonSize="md"
                 buttonWidth="auto"
                 buttonClassName="w-auto! px-7"
+                onButtonClick={() => navigate("/license")}
             />
 
         </section>

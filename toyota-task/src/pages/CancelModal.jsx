@@ -4,9 +4,12 @@ import Footer from "../components/Footer";
 import Reschedule from "@/components/Reschedule";
 import Modal from "../components/Modal";
 import Button from "../components/Button"
+import { useNavigate } from "react-router-dom";
 
 function CancelModal() {
     const [open, setOpen] = useState(true);
+    const navigate = useNavigate();
+    
 
     return (
         <>
@@ -42,6 +45,7 @@ function CancelModal() {
                         variant="primary"
                         width="full"
                         rounded="md"
+                        onClick={() => navigate("/cancelconfirm")}
                     />
 
                     <Button
@@ -49,6 +53,7 @@ function CancelModal() {
                         variant="outline"
                         width="full"
                         rounded="md"
+                        onClick={() => navigate("/rescheduledate")}
                     />
                 </div>
 

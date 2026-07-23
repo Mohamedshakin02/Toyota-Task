@@ -1,6 +1,6 @@
 import React from 'react'
 import document from "../assets/document.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import uae from "../assets/uae flag.png";
 import car from "../assets/cars/car 15.png";
@@ -14,6 +14,9 @@ import DetailsHeading from "./DetailsHeading";
 import Button from "./Button"
 
 function License() {
+
+    const navigate = useNavigate();
+
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
             <DetailsHeading
@@ -41,6 +44,7 @@ function License() {
                             <LicenseCard
                                 state="empty"
                                 label="Upload front"
+                                onClick={() => navigate("/licenseid")}
                             />
 
                             <LicenseCard

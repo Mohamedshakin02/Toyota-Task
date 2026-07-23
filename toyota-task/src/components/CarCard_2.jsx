@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function CarCard_2({
     car,
@@ -15,6 +16,7 @@ function CarCard_2({
     contentPadding = "p-4", 
     children,
 }) {
+    const navigate = useNavigate();
     const isRow = layout === "row";
 
     return (
@@ -28,7 +30,8 @@ function CarCard_2({
             `}
         >
             {showEditIcon && (
-                <i className="bi bi-pencil absolute top-4 right-4 text-xl text-red-600"></i>
+                <i className="bi bi-pencil absolute top-4 right-4 text-xl text-red-600 cursor-pointer"
+                onClick={() => navigate("/reschedule")}></i>
             )}
 
             {/* 1. Image Container: Forces 50% width on large screens */}

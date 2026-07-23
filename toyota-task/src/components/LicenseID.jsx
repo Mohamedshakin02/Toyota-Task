@@ -1,6 +1,6 @@
 import React from 'react'
 import document from "../assets/document.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from "./Button";
 import CarCard_2 from "./CarCard_2";
 import LicenseCard from "./LicenceCard";
@@ -14,6 +14,9 @@ import car from "../assets/cars/car 15.png";
 import EmiratesFront from "../assets/Emirates-front.png";
 
 function LicenseID() {
+
+    const navigate = useNavigate();
+    
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
             <DetailsHeading
@@ -49,6 +52,7 @@ function LicenseID() {
                                 state="empty"
                                 label="Upload back"
                                 disableAspectSquare
+                                onClick={() => navigate("/licenseidfull")}
                             />
                         </LicenseContainer>
 

@@ -7,7 +7,8 @@ function LicenseCard({
     borderColor = "",
     showRemove = false,
     showCheck = false,
-    disableAspectSquare = false,   
+    disableAspectSquare = false,
+    onClick,
     className = "",
 }) {
     const isEmpty = state === "empty";
@@ -15,15 +16,16 @@ function LicenseCard({
 
     return (
         <div
+
+            onClick={onClick}
             className={`
                 flex flex-col
                 w-full
                 p-4
                 rounded-lg
                 gap-y-2
-                ${
-                    isEmpty
-                        ? `
+                ${isEmpty
+                    ? `
                             items-center
                             justify-center
                             border-2
@@ -32,7 +34,7 @@ function LicenseCard({
                             text-gray-600
                             ${disableAspectSquare ? "" : "aspect-square lg:aspect-auto"}
                           `
-                        : `justify-center border-2 ${borderColor}`
+                    : `justify-center border-2 ${borderColor}`
                 }
                 ${className}
             `}
@@ -49,9 +51,8 @@ function LicenseCard({
                     </div>
 
                     <div
-                        className={`h-2 w-full bg-gray-300 ${
-                            isVerified ? "opacity-0" : ""
-                        }`}
+                        className={`h-2 w-full bg-gray-300 ${isVerified ? "opacity-0" : ""
+                            }`}
                     >
                         <div
                             className="h-full bg-black"

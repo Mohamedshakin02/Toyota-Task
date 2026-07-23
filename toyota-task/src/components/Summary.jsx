@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import car from "../assets/cars/car 15.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SectionHeader from "./SectionHeader";
 import SliderTabs from "./SliderTabs";
 import FormQuestion from "./FormQuestion";
@@ -25,6 +25,8 @@ import 'swiper/css/pagination';
 import uae from "../assets/uae flag.png";
 
 function Summary() {
+    const navigate = useNavigate();
+
     const [isArabicRequested, setIsArabicRequested] = useState(false);
     const [isSecondModelRequested, setIsSecondModelRequested] = useState(false);
     const [selectedModel, setSelectedModel] = useState("");
@@ -81,7 +83,7 @@ function Summary() {
                             className='mr-4 lg:mr-0'
                         >
                             <Link
-                                to=""
+                                to="/reschedule"
                                 className="text-red-600 underline hidden lg:inline-block"
                             >
                                 Change
@@ -378,6 +380,7 @@ function Summary() {
                                 label="Confirm"
                                 variant="primary"
                                 showArrow
+                                onClick={() => navigate("/thanks")}
                             />
                         </div>
                     </div>

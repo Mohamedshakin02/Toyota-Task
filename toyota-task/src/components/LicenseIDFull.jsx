@@ -1,6 +1,6 @@
 import React from 'react'
 import document from "../assets/document.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from "./Button";
 import CarCard_2 from "./CarCard_2";
 import LicenseCard from "./LicenceCard";
@@ -15,6 +15,9 @@ import EmiratesFront2 from "../assets/Emirates-front2.png";
 import EmiratesBack from "../assets/Emirates-back.png";
 
 function LicenseIDFull() {
+
+    const navigate = useNavigate();
+
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
             <DetailsHeading
@@ -74,6 +77,7 @@ function LicenseIDFull() {
                         <WaiverCard
                             state="required"
                             image={document}
+                            onClick={() => navigate("/terms")}
                         />
 
                     </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import location1 from "../assets/locations/Location 1.png";
 import location2 from "../assets/locations/Location 2.png";
 import location3 from "../assets/locations/Location 3.png";
@@ -23,8 +23,11 @@ import 'swiper/css/pagination';
 
 
 function Location() {
+    const navigate = useNavigate();
 
-    const [selectedLocation, setSelectedLocation] = useState("Abu Dhabi");
+    const [selectedLocation, setSelectedLocation] = useState("");
+    const [selectedShowroom, setSelectedShowroom] = useState("");
+
     const locationTabs = [
         "Abu Dhabi",
         "Dubai",
@@ -59,6 +62,12 @@ function Location() {
         },
     ];
 
+    useEffect(() => {
+        if (selectedLocation && selectedShowroom) {
+            navigate("/date");
+        }
+    }, [selectedLocation, selectedShowroom, navigate]);
+
 
     return (
         <section className='container px-4 pr-0 lg:px-36 mx-auto mt-12 lg:mt-15'>
@@ -89,7 +98,7 @@ function Location() {
                 <div className='pr-4'>
 
                     <div className='mt-8 gap-5'>
-                        
+
                         <FormQuestion
                             question="Choose Show Room"
                             size='lg'
@@ -102,6 +111,8 @@ function Location() {
                                 <LocationCard
                                     key={location.title}
                                     {...location}
+                                    selected={selectedShowroom === location.title}
+                                    onClick={() => setSelectedShowroom(location.title)}
                                 />
                             ))}
                         </div>

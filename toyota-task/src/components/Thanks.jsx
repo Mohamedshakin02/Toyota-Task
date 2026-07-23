@@ -6,8 +6,11 @@ import uae from "../assets/uae flag.png";
 import Button from "./Button"
 import CarCard_2 from "./CarCard_2"
 import UploadContainer from "./UploadContainer"
+import { useNavigate } from "react-router-dom";
 
 function Thanks() {
+    const navigate = useNavigate();
+
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
 
@@ -91,12 +94,14 @@ function Thanks() {
                         description="Upload now for a faster check-in, or use the link we've sent via WhatsApp/Email to provide it later at your convenience."
                         buttonLabel="Upload now"
                         buttonClassName="!w-auto px-7"
+                        onButtonClick={() => navigate("/license")}
                     />
 
                     <div className='col-span-2 order-4 flex justify-end'>
                         <Button
                             label="Explore Land Cruiser Hybrid"
                             variant="primary"
+                            onClick={() => navigate("/confirm")}
                         />
                     </div>
 

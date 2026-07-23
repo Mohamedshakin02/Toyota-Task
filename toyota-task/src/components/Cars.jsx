@@ -19,6 +19,8 @@ import car12 from "../assets/cars/car 12.png";
 import car13 from "../assets/cars/car 13.png";
 import car14 from "../assets/cars/car 14.png";
 
+import { useNavigate } from "react-router-dom";
+
 function Cars() {
 
     const [selectedCategory, setSelectedCategory] = useState("SUV");
@@ -46,6 +48,8 @@ function Cars() {
         { name: "LAND CRUISER PRADO 2026", image: car13 },
     ];
 
+    const navigate = useNavigate();
+
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15 bg-[#F9F9F9]'>
 
@@ -61,10 +65,15 @@ function Cars() {
             </div>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 py-10">
-                {cars.map((car) => (
+                {cars.map((car, index) => (
                     <div
                         key={car.name}
                         className="rounded-lg p-4 py-8 lg:py-10 bg-white"
+                        onClick={() => {
+                            if (index === 0) {
+                                navigate("/BookModal");
+                            }
+                        }}
                     >
                         <div className="flex items-center justify-center mb-8">
                             <img

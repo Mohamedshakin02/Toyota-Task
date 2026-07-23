@@ -1,6 +1,6 @@
 import React from 'react'
 import document from "../assets/document.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from "./Button"
 import CarCard_2 from "./CarCard_2";
 import LicenseCard from "./LicenceCard";
@@ -16,6 +16,9 @@ import AlertBox from "./AlertBox";
 import DetailsHeading from "./DetailsHeading";
 
 function LicenseError() {
+
+    const navigate = useNavigate();
+
     return (
 
         <>
@@ -95,6 +98,7 @@ function LicenseError() {
                         width="auto"
                         size="md"
                         className="lg:py-3"
+                        onClick={() => navigate("/confirm")}
                     />
                 </div>
 

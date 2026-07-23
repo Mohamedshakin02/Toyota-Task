@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import car from "../assets/cars/car 15.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SectionHeader from "./SectionHeader";
 import SliderTabs from "./SliderTabs";
 import FormQuestion from "./FormQuestion";
@@ -25,6 +25,15 @@ import uae from "../assets/uae flag.png";
 
 
 function Details() {
+
+    const navigate = useNavigate();
+
+    const [firstName, setFirstName] = useState("Ahmed");
+    const [lastName, setLastName] = useState("Ahmed");
+    const [email, setEmail] = useState("ahmad@example.com");
+    const [mobile, setMobile] = useState("");
+    const [termsAccepted, setTermsAccepted] = useState(true);
+
     const [isArabicRequested, setIsArabicRequested] = useState(false);
     const [isSecondModelRequested, setIsSecondModelRequested] = useState(false);
     const [selectedModel, setSelectedModel] = useState("");
@@ -62,6 +71,24 @@ function Details() {
         "WhatsApp",
         "Email"
     ];
+
+    const isFormValid =
+        purchaseType &&
+        buyTime &&
+        title &&
+        firstName.trim() !== "" &&
+        lastName.trim() !== "" &&
+        email.trim() !== "" &&
+        mobile.trim() !== "" &&
+        contactPreference &&
+        termsAccepted &&
+        (!isSecondModelRequested || selectedModel);
+
+    const handleNext = () => {
+        if (isFormValid) {
+            navigate("/location");
+        }
+    };
 
     return (
 
@@ -156,6 +183,7 @@ function Details() {
                                 <InputBox
                                     label="First name"
                                     value="Ahmed"
+                                    onChange={(e) => setFirstName(e.target.value)}
                                 />
                             </div>
 
@@ -164,6 +192,7 @@ function Details() {
                                 <InputBox
                                     label="Last name"
                                     value="Ahmed"
+                                    onChange={(e) => setLastName(e.target.value)}
                                 />
                             </div>
 
@@ -177,6 +206,7 @@ function Details() {
                                     label="Enter email address"
                                     value="ahmad@example.com"
                                     className="h-full"
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                             </div>
 
@@ -198,6 +228,8 @@ function Details() {
 
                                     <input
                                         type="text"
+                                        value={mobile}
+                                        onChange={(e) => setMobile(e.target.value)}
                                         placeholder="Mobile Number*"
                                         className="h-full flex-1 p-2 border-l-2 border-gray-400 outline-none focus:outline-none"
                                     />
@@ -345,7 +377,8 @@ function Details() {
 
                             <CheckBox
                                 id="terms"
-                                checked
+                                checked={termsAccepted}
+                                onChange={(e) => setTermsAccepted(e.target.checked)}
                             >
                                 I have read and agree to the{" "}
                                 <span className="text-red-600 underline">
@@ -358,8 +391,10 @@ function Details() {
                         <div className='mt-10 lg:mt-0'>
                             <Button
                                 label="Next"
-                                variant="secondary"
+                                variant={isFormValid ? "primary" : "secondary"}
+                                disabled={!isFormValid}
                                 showArrow
+                                onClick={handleNext}
                             />
                         </div>
                     </div>

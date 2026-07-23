@@ -3,7 +3,7 @@ import location1 from "../assets/locations/Location 1.png";
 import location2 from "../assets/locations/Location 2.png";
 import location3 from "../assets/locations/Location 3.png";
 import location4 from "../assets/locations/Location 4.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SectionHeader from "./SectionHeader";
 import SliderTabs from "../components/SliderTabs";
 import Button from "./Button"
@@ -28,6 +28,8 @@ import { useState } from "react";
 import { Calendar } from "@/components/ui/calendar-rac";
 
 function Date() {
+    const navigate = useNavigate();
+
     const [date, setDate] = useState(
         today(getLocalTimeZone())
     );
@@ -209,6 +211,7 @@ function Date() {
                             width="auto"
                             size="md"
                             showArrow
+                            onClick={() => navigate("/summary")}
                         />
                     </div>
 

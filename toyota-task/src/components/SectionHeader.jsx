@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function SectionHeader({
     title,
@@ -7,6 +8,8 @@ function SectionHeader({
     size = "lg", // lg | md
     className = "",
 }) {
+    const navigate = useNavigate();
+
     const titleSize = {
         lg: "text-3xl lg:text-2xl",
         md: "text-lg",
@@ -15,7 +18,8 @@ function SectionHeader({
     return (
         <div className={`flex items-center gap-3 ${className}`}>
             {showBackButton && (
-                <i className="bi bi-arrow-left-short text-4xl lg:text-3xl"></i>
+                <i className="bi bi-arrow-left-short text-4xl lg:text-3xl cursor-pointer"
+                onClick={() => navigate(-1)}></i>
             )}
 
             <h1

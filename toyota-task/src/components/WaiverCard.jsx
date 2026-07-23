@@ -3,6 +3,7 @@ import React from "react";
 function WaiverCard({
     state = "pending", // pending | required | accepted
     image,
+    onClick,
     className = "",
 }) {
     const isPending = state === "pending";
@@ -37,7 +38,7 @@ function WaiverCard({
                     </div>
                 </div>
 
-                <div className="col-span-4 flex flex-col items-center justify-center gap-y-5">
+                <div className="col-span-4 flex flex-col items-center justify-center gap-y-5" onClick={onClick}>
                     {isAccepted ? (
                         <>
                             <i className="bi bi-check-circle-fill text-2xl text-green-500"></i>

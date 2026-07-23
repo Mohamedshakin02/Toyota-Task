@@ -7,14 +7,19 @@ function LocationCard({
     selected = false,
     lastVisited = false,
     hiddenMobile = false,
+    onClick,
 }) {
     return (
         <div
+            onClick={onClick}
             className={`
-                ${hiddenMobile ? "hidden lg:flex" : "flex"}
-                ${selected ? "mt-8 lg:mt-0 bg-gray-300 border border-black" : "bg-gray-200"}
-                relative rounded-2xl lg:rounded-lg p-2 gap-x-4
-            `}
+        ${hiddenMobile ? "hidden lg:flex" : "flex"}
+        ${selected
+                    ? "mt-8 lg:mt-0 bg-gray-300 border border-black"
+                    : "bg-gray-200"
+                }
+        relative rounded-2xl lg:rounded-lg p-2 gap-x-4 cursor-pointer transition-all
+    `}
         >
             {lastVisited && (
                 <div className="inline-block lg:hidden absolute bottom-[calc(100%-1px)] right-2.5 bg-black text-white px-4 py-1.5 rounded-t-xl text-sm -z-1">

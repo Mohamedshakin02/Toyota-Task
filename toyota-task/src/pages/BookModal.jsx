@@ -5,9 +5,16 @@ import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import uae from "../assets/uae flag.png";
 import Button from "../components/Button"
+import { useNavigate } from "react-router-dom";
 
 function BookModal() {
     const [open, setOpen] = useState(true);
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent page refresh
+        navigate("/pinmodal");
+    };
 
     return (
         <>
@@ -25,7 +32,7 @@ function BookModal() {
                         Book a test drive
                     </h1>
 
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="mb-2">
                             <label
                                 htmlFor="name"

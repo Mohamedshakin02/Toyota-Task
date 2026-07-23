@@ -1,6 +1,6 @@
 import React from 'react'
 import document from "../assets/document.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from "./Button";
 import CarCard_2 from "./CarCard_2";
 import DetailsHeading2 from "./DetailsHeading2";
@@ -13,6 +13,9 @@ import EmiratesFront2 from "../assets/Emirates-front2.png";
 import EmiratesBack from "../assets/Emirates-back.png";
 
 function RescheduleConfirm() {
+
+    const navigate = useNavigate();
+
     return (
         <section className='container px-4 lg:px-36 mx-auto mt-12 lg:mt-15'>
 
@@ -57,6 +60,7 @@ function RescheduleConfirm() {
                 buttonSize="md"
                 buttonWidth="auto"
                 buttonClassName="w-auto! px-7"
+                onButtonClick={() => navigate("/license")}
             />
 
         </section>
