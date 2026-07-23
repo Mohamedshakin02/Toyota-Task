@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 function Button({
     label,
@@ -35,8 +37,6 @@ function Button({
     const radius = {
         none: "",
         md: "rounded-md",
-        lg: "rounded-lg",
-        full: "rounded-full"
     };
 
     return (
@@ -62,3 +62,16 @@ function Button({
 }
 
 export default Button;
+
+Button.propTypes = {
+  label: PropTypes.string,
+  children: PropTypes.node,
+  type: PropTypes.oneOf(["button", "submit"]),
+  onClick: PropTypes.func,
+  variant: PropTypes.oneOf(["primary", "secondary", "outline"]),
+  size: PropTypes.oneOf(["sm", "md", "lg", "wide"]),
+  width: PropTypes.oneOf(["auto", "full", "quarter"]),
+  rounded: PropTypes.oneOf(["none", "md"]),
+  showArrow: PropTypes.bool,
+  className: PropTypes.string,
+};

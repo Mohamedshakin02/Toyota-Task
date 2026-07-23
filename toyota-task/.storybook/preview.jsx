@@ -1,4 +1,8 @@
 /** @type { import('@storybook/react-vite').Preview } */
+
+import "../src/index.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 const preview = {
   parameters: {
     controls: {
