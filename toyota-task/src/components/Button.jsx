@@ -64,7 +64,7 @@ function Button({
 export default Button;
 
 Button.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   children: PropTypes.node,
   type: PropTypes.oneOf(["button", "submit"]),
   onClick: PropTypes.func,

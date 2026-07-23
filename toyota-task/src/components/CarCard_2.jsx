@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function CarCard_2({
     car,
@@ -80,5 +81,21 @@ function CarCard_2({
         </div>
     );
 }
+
+CarCard_2.propTypes = {
+  car: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  vehicle: PropTypes.string.isRequired,
+  showroom: PropTypes.string.isRequired,
+  layout: PropTypes.oneOf(["column", "row"]),
+  showEditIcon: PropTypes.bool,
+  imageClassName: PropTypes.string,
+  imageContainerClassName: PropTypes.string,
+  className: PropTypes.string,
+  dateClassName: PropTypes.string,
+  valueClassName: PropTypes.string,
+  contentPadding: PropTypes.string,
+  children: PropTypes.node,
+};
 
 export default CarCard_2;

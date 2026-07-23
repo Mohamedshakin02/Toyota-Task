@@ -2,9 +2,15 @@
 
 import "../src/index.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 
 const preview = {
   parameters: {
+
+    viewport: {
+      options: INITIAL_VIEWPORTS,
+    },
+
     controls: {
       matchers: {
        color: /(background|color)$/i,

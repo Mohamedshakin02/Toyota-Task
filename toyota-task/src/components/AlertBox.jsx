@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 function AlertBox({
     title,
@@ -23,5 +25,11 @@ function AlertBox({
         </section>
     );
 }
+
+AlertBox.propTypes = {
+    title: PropTypes.string,
+    message: PropTypes.string,
+    className: PropTypes.string,
+};
 
 export default AlertBox;
