@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 function CategoryTabs({
     options,
@@ -43,5 +45,13 @@ function CategoryTabs({
         </ul>
     );
 }
+
+CategoryTabs.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selected: PropTypes.string.isRequired,
+  setSelected: PropTypes.func.isRequired,
+  roundedUnderline: PropTypes.bool,
+  className: PropTypes.string,
+};
 
 export default CategoryTabs;

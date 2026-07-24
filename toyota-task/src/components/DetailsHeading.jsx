@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function PageIntro({
+function DetailsHeading({
     title,
     description,
     align = "left", // left | center
@@ -39,4 +40,13 @@ function PageIntro({
     );
 }
 
-export default PageIntro;
+DetailsHeading.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  align: PropTypes.oneOf(["left", "center"]),
+  className: PropTypes.string,
+  titleClassName: PropTypes.string,
+  descriptionClassName: PropTypes.string,
+};
+
+export default DetailsHeading;

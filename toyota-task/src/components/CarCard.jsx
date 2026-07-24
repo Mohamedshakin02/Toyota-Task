@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 function CarCard({
     car,
@@ -65,5 +67,16 @@ function CarCard({
         </div>
     );
 }
+
+CarCard.propTypes = {
+  car: PropTypes.string.isRequired,
+  vehicle: PropTypes.string.isRequired,
+  layout: PropTypes.oneOf(["row", "column"]),
+  imageClassName: PropTypes.string,
+  imageContainerClassName: PropTypes.string,
+  textContainerClassName: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node,
+};
 
 export default CarCard;

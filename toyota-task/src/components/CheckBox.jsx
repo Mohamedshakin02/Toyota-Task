@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function CheckBox({
     id,
@@ -26,5 +27,13 @@ function CheckBox({
         </div>
     );
 }
+
+CheckBox.propTypes = {
+  id: PropTypes.string.isRequired,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
+  children: PropTypes.node.isRequired,
+  inputClassName: PropTypes.string,
+};
 
 export default CheckBox;

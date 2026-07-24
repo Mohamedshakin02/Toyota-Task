@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function DetailsHeading2({
     reference,
@@ -28,5 +29,14 @@ function DetailsHeading2({
         </div>
     );
 }
+
+DetailsHeading2.propTypes = {
+    reference: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    titleClassName: PropTypes.string,
+    descriptionClassName: PropTypes.string,
+};
 
 export default DetailsHeading2;

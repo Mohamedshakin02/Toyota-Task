@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ConfirmBox({
     title,
@@ -39,5 +40,13 @@ function ConfirmBox({
         </div>
     );
 }
+
+ConfirmBox.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  icon: PropTypes.string,
+  iconClassName: PropTypes.string,
+  className: PropTypes.string,
+};
 
 export default ConfirmBox;
